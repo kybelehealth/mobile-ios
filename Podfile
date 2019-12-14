@@ -14,7 +14,7 @@ target 'Kybele' do
     pod 'Kingfisher'
     pod 'lottie-ios'
     pod 'ObjectMapper'
-
+    pod 'AlamofireObjectMapper'
 
   target 'KybeleTests' do
     inherit! :search_paths

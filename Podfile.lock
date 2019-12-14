@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.9.1)
+  - AlamofireObjectMapper (5.2.1):
+    - Alamofire (~> 4.7)
+    - ObjectMapper (~> 3.4)
   - Amplitude-iOS (4.9.3)
   - Kingfisher (5.11.0):
     - Kingfisher/Core (= 5.11.0)
@@ -31,6 +34,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireObjectMapper
   - Amplitude-iOS (~> 4.5)
   - Kingfisher
   - lottie-ios
@@ -41,6 +45,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - AlamofireObjectMapper
     - Amplitude-iOS
     - Kingfisher
     - lottie-ios
@@ -50,6 +55,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   Amplitude-iOS: 122e026c44db8460e5efcf84859aa290a0ae9786
   Kingfisher: 4569606189149e19c7d9439f47e885d0679b7a90
   lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
@@ -57,6 +63,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
 
-PODFILE CHECKSUM: d786531b81faea94eb8b6222d09d02ad8899fc53
+PODFILE CHECKSUM: 390fb72d26c10824361a98636298e4acee616898
 
 COCOAPODS: 1.8.4

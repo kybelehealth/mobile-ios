@@ -46,6 +46,10 @@
 		3DB3B65D23A5568E0024F373 /* InformationBlogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB3B65C23A5568E0024F373 /* InformationBlogCell.swift */; };
 		7C661A259D713786D4F8A008 /* Pods_KybeleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8158AD25E8925CA52C0C474 /* Pods_KybeleTests.framework */; };
 		81DDB9C2020C9DE0DFA86A42 /* Pods_Kybele_KybeleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA7AE992849071A0FF5475F /* Pods_Kybele_KybeleUITests.framework */; };
+		95D9531623A56110005BA7B4 /* LoginTwoFactorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531523A56110005BA7B4 /* LoginTwoFactorResponse.swift */; };
+		95D9531823A5616F005BA7B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531723A5616F005BA7B4 /* User.swift */; };
+		95D9531A23A56220005BA7B4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531923A56220005BA7B4 /* Language.swift */; };
+		95D9531C23A564E6005BA7B4 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531B23A564E6005BA7B4 /* LoginResponse.swift */; };
 		CA2ED531AC25930239BB95CF /* Pods_Kybele.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFFF6E416C817D85BFFF986 /* Pods_Kybele.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +119,10 @@
 		3DB3B65C23A5568E0024F373 /* InformationBlogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBlogCell.swift; sourceTree = "<group>"; };
 		6AFFF6E416C817D85BFFF986 /* Pods_Kybele.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kybele.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C1FD33139C1265C0972A0B /* Pods-Kybele.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kybele.release.xcconfig"; path = "Target Support Files/Pods-Kybele/Pods-Kybele.release.xcconfig"; sourceTree = "<group>"; };
+		95D9531523A56110005BA7B4 /* LoginTwoFactorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTwoFactorResponse.swift; sourceTree = "<group>"; };
+		95D9531723A5616F005BA7B4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		95D9531923A56220005BA7B4 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		95D9531B23A564E6005BA7B4 /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A4A0D38450F1D1FD90BD70DF /* Pods-Kybele-KybeleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kybele-KybeleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kybele-KybeleUITests/Pods-Kybele-KybeleUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4AA941B0F6D68F7B65FA7BA /* Pods-KybeleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KybeleTests.debug.xcconfig"; path = "Target Support Files/Pods-KybeleTests/Pods-KybeleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DD32163F33913D90F536EC05 /* Pods-Kybele.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kybele.debug.xcconfig"; path = "Target Support Files/Pods-Kybele/Pods-Kybele.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 		3DA4F08D23A5035D001A2B97 /* Kybele */ = {
 			isa = PBXGroup;
 			children = (
+				95D9531223A560B5005BA7B4 /* Responses */,
 				3DA4F0E223A5280E001A2B97 /* Constants */,
 				3DA4F08E23A5035D001A2B97 /* AppDelegate.swift */,
 				3DA4F0BE23A5073B001A2B97 /* AppInit.swift */,
@@ -331,6 +340,17 @@
 				3DB3B65C23A5568E0024F373 /* InformationBlogCell.swift */,
 			);
 			path = InformationBlog;
+			sourceTree = "<group>";
+		};
+		95D9531223A560B5005BA7B4 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				95D9531523A56110005BA7B4 /* LoginTwoFactorResponse.swift */,
+				95D9531B23A564E6005BA7B4 /* LoginResponse.swift */,
+				95D9531723A5616F005BA7B4 /* User.swift */,
+				95D9531923A56220005BA7B4 /* Language.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		D8C480923C1E182DA2BC42FC /* Frameworks */ = {
@@ -582,12 +602,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DB3B65923A555FF0024F373 /* InformationBlogView.swift in Sources */,
+				95D9531C23A564E6005BA7B4 /* LoginResponse.swift in Sources */,
 				3DA4F0CC23A50BD3001A2B97 /* ViewModel.swift in Sources */,
 				3DA4F0F523A53C6F001A2B97 /* WebViewController.swift in Sources */,
 				3DA4F0D723A51015001A2B97 /* Loading.swift in Sources */,
 				3DA4F0FF23A54EE7001A2B97 /* HealthRecordsViewModel.swift in Sources */,
 				3DA4F0BF23A5073B001A2B97 /* AppInit.swift in Sources */,
 				3DA4F0D223A50F9B001A2B97 /* SplashViewControllre.swift in Sources */,
+				95D9531623A56110005BA7B4 /* LoginTwoFactorResponse.swift in Sources */,
 				3DA4F0E423A5281C001A2B97 /* Size.swift in Sources */,
 				3DA4F0FB23A54CA7001A2B97 /* HealthProfileViewModel.swift in Sources */,
 				3DA4F08F23A5035D001A2B97 /* AppDelegate.swift in Sources */,
@@ -605,6 +627,7 @@
 				3DB3B65D23A5568E0024F373 /* InformationBlogCell.swift in Sources */,
 				3DA4F0F923A54862001A2B97 /* HealthProfileViewController.swift in Sources */,
 				3DA4F0E823A5320C001A2B97 /* Identifiable.swift in Sources */,
+				95D9531A23A56220005BA7B4 /* Language.swift in Sources */,
 				3DA4F0DF23A52152001A2B97 /* HomepageCell.swift in Sources */,
 				3DA4F0CE23A50C35001A2B97 /* ErrorHandler.swift in Sources */,
 				3DA4F0EC23A5397F001A2B97 /* UIStackView+Maker.swift in Sources */,
@@ -612,6 +635,7 @@
 				3DA4F0C523A509CC001A2B97 /* UINavigationContrroller+Styling.swift in Sources */,
 				3DA4F0D923A510F8001A2B97 /* SplashView.swift in Sources */,
 				3DA4F0EA23A53861001A2B97 /* UIButton+Maker.swift in Sources */,
+				95D9531823A5616F005BA7B4 /* User.swift in Sources */,
 				3DA4F0DD23A511AE001A2B97 /* SplashApi.swift in Sources */,
 				3DB3B65423A550160024F373 /* NewRecordView.swift in Sources */,
 			);
