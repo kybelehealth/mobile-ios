@@ -12,11 +12,19 @@ class InformationBlogCell: UICollectionViewCell {
 
     // MARK: - Properties
 
+    private let blogImageView = UIImageView.make(contentMode: .scaleToFill, cornerRadius: 10)
+
     private let titleLabel = UILabel.make(ofSize: 20, strong: true, lines: 0)
 
     private let bodyLabel = UILabel.make(ofSize: 14, lines: 0)
 
-    private lazy var stackView: UIStackView = .make(arrangedSubViews: [titleLabel, bodyLabel],
+    private let readMoreLabel = UILabel.make(ofSize: 16, strong: true, defaultText: "Read More", color: .purple)
+
+
+    private lazy var stackView: UIStackView = .make(arrangedSubViews: [blogImageView,
+                                                                       titleLabel,
+                                                                       bodyLabel,
+                                                                       readMoreLabel],
                                                     axis: .vertical,
                                                     spacing: 8)
 
@@ -27,9 +35,19 @@ class InformationBlogCell: UICollectionViewCell {
         super.init(frame: frame)
 
         addSubview(stackView)
+
         stackView.snp.makeConstraints {
             $0.edges.equalToSuperview().inset(16)
         }
+
+        blogImageView.backgroundColor = .lightGray
+
+        backgroundColor = .white
+        layer.cornerRadius = 12
+        shadowOffset = CGSize(width: 0, height: 0)
+        shadowColor = UIColor.black
+        shadowOpacity = 0.1
+        shadowRadius = 6
     }
 
     required init?(coder: NSCoder) {
@@ -39,7 +57,6 @@ class InformationBlogCell: UICollectionViewCell {
 }
 
 extension InformationBlogCell {
-
 
     func configure(with item: InformationBlog) {
         titleLabel.text = item.name

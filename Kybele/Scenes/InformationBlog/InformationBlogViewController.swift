@@ -31,11 +31,14 @@ class InformationBlogViewController: UIViewController {
     }
 
     override func loadView() {
-        viewSource = InformationBlogView()
+        view = viewSource
+        title = viewModel.pageTitle
+        view.backgroundColor = .white
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 
@@ -59,8 +62,8 @@ extension InformationBlogViewController: UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         let width = collectionView.frame.width
-        let cellWidth = (width - (Sizes.appSideMargin * 2) - Sizes.homepageInteritemSpace)/2
-        return CGSize(width: cellWidth, height: cellWidth)
+        let cellWidth = (width - (Sizes.appSideMargin * 2))
+        return CGSize(width: cellWidth, height: 285)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

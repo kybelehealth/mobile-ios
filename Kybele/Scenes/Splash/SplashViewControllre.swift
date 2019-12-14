@@ -12,7 +12,6 @@ final class SplashViewController: UIViewController {
 
     // MARK: - Properties
     private(set) var viewSource = SplashView()
-
     private(set) var viewModel: SplashViewModel
     private(set) var loadingView: LoadingView
 

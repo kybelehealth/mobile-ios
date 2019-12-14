@@ -19,6 +19,6 @@ extension UINavigationController {
         navigationBar.shadowOpacity = 0.06
         navigationBar.shadowOffset = CGSize(width: 0, height: 2)
         navigationBar.shadowRadius = 4
-        navigationBar.isTranslucent = false
+        navigationBar.isTranslucent = true
     }
 }
