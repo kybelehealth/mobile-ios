@@ -1,6 +1,0 @@
-framework module Pods_KybeleTests {
-  umbrella header "Pods-KybeleTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
