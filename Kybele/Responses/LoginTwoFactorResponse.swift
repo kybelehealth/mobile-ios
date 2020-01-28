@@ -6,17 +6,17 @@
 //  Copyright © 2019 Rufat Mirza. All rights reserved.
 //
 
-import ObjectMapper
+//import ObjectMapper
 import Foundation
 
-struct LoginTwoFactorResponse: Mappable {
+struct LoginTwoFactorResponse: Codable {
     var token: String?
     var user: User?
     
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        token <- map["token"]
-        user <- map["user"]
-    }
+//    init?(map: Map) {}
+//
+//    mutating func mapping(map: Map) {
+//        token <- map["token"]
+//        user <- map["user"]
+//    }
 }

@@ -7,14 +7,13 @@ target 'Kybele' do
 
   # Pods for Kybele
 
-    pod 'Amplitude-iOS', '~> 4.5'
     pod 'SnapKit'
-    pod 'SwifterSwift'
-    pod 'Alamofire'
-    pod 'Kingfisher'
-    pod 'lottie-ios'
-    pod 'ObjectMapper'
-    pod 'AlamofireObjectMapper'
+#    pod 'SwifterSwift'
+#    pod 'Alamofire'
+#    pod 'Kingfisher'
+#    pod 'lottie-ios'
+#    pod 'ObjectMapper'
+#    pod 'AlamofireObjectMapper'
 
   target 'KybeleTests' do
     inherit! :search_paths

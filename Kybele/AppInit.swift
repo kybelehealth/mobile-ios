@@ -23,7 +23,7 @@ extension AppInit {
 //        }
 
 //        return didSkipOnboarding ? loginController : onboardingController
-        return homepageController
+        return loginController
     }
 
 //  var onboardingController: UINavigationController {
@@ -70,11 +70,15 @@ extension AppInit {
 //      return controller
 //  }
 
-  var homepageController: UIViewController {
-      let controller = HomepageViewController()
-      let navigationController = UINavigationController(rootViewController: controller)
-      navigationController.setupStyling()
-      return navigationController
-  }
+    var homepageController: UIViewController {
+        let controller = HomepageViewController()
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.setupStyling()
+        return navigationController
+    }
 
+    var loginController: UIViewController {
+        let controller = LoginViewController()
+        return controller
+    }
 }

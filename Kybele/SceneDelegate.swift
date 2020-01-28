@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
 
         let rootController = appInit.rootController
-        window.rootViewController = HomepageViewController()
+        window.rootViewController = LoginViewController()
         return window
     }()
 
@@ -35,7 +35,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     if let windowScene = scene as? UIWindowScene {
         let window = UIWindow(windowScene: windowScene)
         window.backgroundColor = .white
-        window.rootViewController = appInit.homepageController
+        window.rootViewController = appInit.loginController
         self.window = window
         window.makeKeyAndVisible()
     }

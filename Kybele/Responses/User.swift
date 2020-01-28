@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import ObjectMapper
+//import ObjectMapper
 
-struct User: Mappable, Identifiable {
+struct User: Codable, Identifiable {
     var id: Int?
     var firstName: String?
     var lastName: String?
@@ -20,17 +20,17 @@ struct User: Mappable, Identifiable {
     var lastPeriodDate: String?
     var Language: Language?
     
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        id <- map["id"]
-        firstName <- map["firstName"]
-        lastName <- map["lastName"]
-        phoneNumber <- map["phoneNumber"]
-        gender <- map["gender"]
-        birthDate <- map["birthDate"]
-        email <- map["email"]
-        lastPeriodDate <- map["lastPeriodDate"]
-        Language <- map["Language"]
-    }
+//    init?(map: Map) {}
+//    
+//    mutating func mapping(map: Map) {
+//        id <- map["id"]
+//        firstName <- map["firstName"]
+//        lastName <- map["lastName"]
+//        phoneNumber <- map["phoneNumber"]
+//        gender <- map["gender"]
+//        birthDate <- map["birthDate"]
+//        email <- map["email"]
+//        lastPeriodDate <- map["lastPeriodDate"]
+//        Language <- map["Language"]
+//    }
 }

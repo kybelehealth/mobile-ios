@@ -6,17 +6,17 @@
 //  Copyright © 2019 Rufat Mirza. All rights reserved.
 //
 
-import ObjectMapper
+//import ObjectMapper
 import Foundation
 
-struct Language: Mappable, Identifiable {
+struct Language: Codable, Identifiable {
     var id: Int?
     var name: String?
     
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        id <- map["id"]
-        name <- map["name"]
-    }
+//    init?(map: Map) {}
+//
+//    mutating func mapping(map: Map) {
+//        id <- map["id"]
+//        name <- map["name"]
+//    }
 }

@@ -42,6 +42,7 @@ class HomepageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
 }
 
 extension HomepageViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

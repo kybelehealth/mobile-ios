@@ -6,17 +6,8 @@
 //  Copyright © 2019 Rufat Mirza. All rights reserved.
 //
 
-import ObjectMapper
-import Foundation
+struct LoginResponse: Codable {
 
-struct LoginResponse: Mappable {
-    var authyId: Int?
+    var authyId: String?
     var message: String?
-    
-    init?(map: Map) {}
-    
-    mutating func mapping(map: Map) {
-        authyId <- map["authyId"]
-        message <- map["message"]
-    }
 }
