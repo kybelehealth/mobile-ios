@@ -17,10 +17,10 @@
 		3D4E961923DC5D0200D45214 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E961823DC5D0200D45214 /* UIColor+Colors.swift */; };
 		3D4E961B23DC600700D45214 /* UIView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E961A23DC600700D45214 /* UIView+Additions.swift */; };
 		3D4E961D23DC6CB800D45214 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E961C23DC6CB800D45214 /* Type.swift */; };
-		3D4E962023DC77C200D45214 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3D4E961F23DC77C200D45214 /* SwiftPackageProductDependency */; };
+		3D4E962023DC77C200D45214 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D4E961F23DC77C200D45214 /* KeychainSwift */; };
 		3D4E962323DC846800D45214 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E962223DC846800D45214 /* KeychainService.swift */; };
-		3D6FA1AF23DF0365005458A6 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FA1AE23DF0365005458A6 /* SwiftPackageProductDependency */; };
-		3D6FA1B223E01F96005458A6 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FA1B123E01F96005458A6 /* SwiftPackageProductDependency */; };
+		3D6FA1AF23DF0365005458A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FA1AE23DF0365005458A6 /* Alamofire */; };
+		3D6FA1B223E01F96005458A6 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FA1B123E01F96005458A6 /* SwifterSwift */; };
 		3D72902723E02A1B00FE094A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D72902623E02A1B00FE094A /* Kingfisher.framework */; };
 		3D72902A23E02CBF00FE094A /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D72902923E02CBF00FE094A /* Lottie.framework */; };
 		3D72903223E046D100FE094A /* Any+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72903123E046D100FE094A /* Any+Additions.swift */; };
@@ -163,9 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D72902723E02A1B00FE094A /* Kingfisher.framework in Frameworks */,
-				3D6FA1AF23DF0365005458A6 /* BuildFile in Frameworks */,
-				3D6FA1B223E01F96005458A6 /* BuildFile in Frameworks */,
-				3D4E962023DC77C200D45214 /* BuildFile in Frameworks */,
+				3D6FA1AF23DF0365005458A6 /* Alamofire in Frameworks */,
+				3D6FA1B223E01F96005458A6 /* SwifterSwift in Frameworks */,
+				3D4E962023DC77C200D45214 /* KeychainSwift in Frameworks */,
 				3D72902A23E02CBF00FE094A /* Lottie.framework in Frameworks */,
 				BCAF24AC6F0AE86F439C38CA /* Pods_Kybele.framework in Frameworks */,
 			);
@@ -190,6 +190,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D345EB923E08A3D00F10BA2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3DA4F0E723A5320C001A2B97 /* Identifiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		3D4E960723DC392700D45214 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,16 +251,17 @@
 			isa = PBXGroup;
 			children = (
 				3DA4F08E23A5035D001A2B97 /* AppDelegate.swift */,
+				3DA4F09023A5035D001A2B97 /* SceneDelegate.swift */,
 				3DA4F0BE23A5073B001A2B97 /* AppInit.swift */,
 				3DA4F09723A5035F001A2B97 /* Assets.xcassets */,
 				3D4E961623DC5B5600D45214 /* Colors.xcassets */,
-				3DA4F0E223A5280E001A2B97 /* Constants */,
-				3DA4F0C323A509B3001A2B97 /* Extensions */,
 				3DA4F09C23A5035F001A2B97 /* Info.plist */,
 				3DA4F09923A5035F001A2B97 /* LaunchScreen.storyboard */,
+				3DA4F0E223A5280E001A2B97 /* Constants */,
+				3DA4F0C323A509B3001A2B97 /* Extensions */,
 				3D4E960723DC392700D45214 /* Network */,
+				3D345EB923E08A3D00F10BA2 /* Protocols */,
 				95D9531223A560B5005BA7B4 /* Responses */,
-				3DA4F09023A5035D001A2B97 /* SceneDelegate.swift */,
 				3DA4F0C023A50928001A2B97 /* Scenes */,
 				3D4E962123DC845400D45214 /* Services */,
 				3DA4F0CA23A50BB8001A2B97 /* Shared */,
@@ -281,14 +290,14 @@
 		3DA4F0C023A50928001A2B97 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3D4E960F23DC503B00D45214 /* Login */,
-				3DA4F0D023A50F84001A2B97 /* Splash */,
-				3DA4F0CF23A50F7C001A2B97 /* Homepage */,
 				3DA4F0EE23A53ACE001A2B97 /* Calendar */,
-				3DB3B65523A555830024F373 /* InformationBlog */,
+				3DA4F0F223A53BD3001A2B97 /* HealthCenters */,
 				3DA4F0EF23A53B76001A2B97 /* HealthProfile */,
 				3DA4F0F123A53BB6001A2B97 /* HealthRecords */,
-				3DA4F0F223A53BD3001A2B97 /* HealthCenters */,
+				3DA4F0CF23A50F7C001A2B97 /* Homepage */,
+				3DB3B65523A555830024F373 /* InformationBlog */,
+				3D4E960F23DC503B00D45214 /* Login */,
+				3DA4F0D023A50F84001A2B97 /* Splash */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -296,14 +305,14 @@
 		3DA4F0C323A509B3001A2B97 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3DA4F0C423A509CC001A2B97 /* UINavigationContrroller+Styling.swift */,
-				3DA4F0E023A521C7001A2B97 /* UILabel+Maker.swift */,
-				3DA4F0E523A52BE1001A2B97 /* UIImage+Maker.swift */,
-				3DA4F0E923A53861001A2B97 /* UIButton+Maker.swift */,
-				3DA4F0EB23A5397F001A2B97 /* UIStackView+Maker.swift */,
-				3D4E961823DC5D0200D45214 /* UIColor+Colors.swift */,
-				3D4E961A23DC600700D45214 /* UIView+Additions.swift */,
 				3D72903123E046D100FE094A /* Any+Additions.swift */,
+				3DA4F0E923A53861001A2B97 /* UIButton+Maker.swift */,
+				3D4E961823DC5D0200D45214 /* UIColor+Colors.swift */,
+				3DA4F0E523A52BE1001A2B97 /* UIImage+Maker.swift */,
+				3DA4F0E023A521C7001A2B97 /* UILabel+Maker.swift */,
+				3DA4F0C423A509CC001A2B97 /* UINavigationContrroller+Styling.swift */,
+				3DA4F0EB23A5397F001A2B97 /* UIStackView+Maker.swift */,
+				3D4E961A23DC600700D45214 /* UIView+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,11 +320,10 @@
 		3DA4F0CA23A50BB8001A2B97 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				3DA4F0CB23A50BD3001A2B97 /* ViewModel.swift */,
 				3DA4F0CD23A50C35001A2B97 /* ErrorHandler.swift */,
-				3DA4F0D423A50FDD001A2B97 /* View.swift */,
 				3DA4F0D623A51015001A2B97 /* Loading.swift */,
-				3DA4F0E723A5320C001A2B97 /* Identifiable.swift */,
+				3DA4F0D423A50FDD001A2B97 /* View.swift */,
+				3DA4F0CB23A50BD3001A2B97 /* ViewModel.swift */,
 				3DA4F0F423A53C6F001A2B97 /* WebViewController.swift */,
 			);
 			path = Shared;
@@ -399,10 +407,10 @@
 		95D9531223A560B5005BA7B4 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				95D9531523A56110005BA7B4 /* LoginTwoFactorResponse.swift */,
-				95D9531B23A564E6005BA7B4 /* LoginResponse.swift */,
-				95D9531723A5616F005BA7B4 /* User.swift */,
 				95D9531923A56220005BA7B4 /* Language.swift */,
+				95D9531B23A564E6005BA7B4 /* LoginResponse.swift */,
+				95D9531523A56110005BA7B4 /* LoginTwoFactorResponse.swift */,
+				95D9531723A5616F005BA7B4 /* User.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -430,7 +438,6 @@
 				49210B38D9E4B3F222895724 /* Pods-KybeleTests.debug.xcconfig */,
 				B64944C43BE8B79A829B9C50 /* Pods-KybeleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -454,9 +461,9 @@
 			);
 			name = Kybele;
 			packageProductDependencies = (
-				3D4E961F23DC77C200D45214 /* SwiftPackageProductDependency */,
-				3D6FA1AE23DF0365005458A6 /* SwiftPackageProductDependency */,
-				3D6FA1B123E01F96005458A6 /* SwiftPackageProductDependency */,
+				3D4E961F23DC77C200D45214 /* KeychainSwift */,
+				3D6FA1AE23DF0365005458A6 /* Alamofire */,
+				3D6FA1B123E01F96005458A6 /* SwifterSwift */,
 			);
 			productName = Kybele;
 			productReference = 3DA4F08B23A5035D001A2B97 /* Kybele.app */;
@@ -534,9 +541,9 @@
 			);
 			mainGroup = 3DA4F08223A5035D001A2B97;
 			packageReferences = (
-				3D4E961E23DC77C100D45214 /* RemoteSwiftPackageReference */,
-				3D6FA1AD23DF0365005458A6 /* RemoteSwiftPackageReference */,
-				3D6FA1B023E01F96005458A6 /* RemoteSwiftPackageReference */,
+				3D4E961E23DC77C100D45214 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				3D6FA1AD23DF0365005458A6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3D6FA1B023E01F96005458A6 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 			);
 			productRefGroup = 3DA4F08C23A5035D001A2B97 /* Products */;
 			projectDirPath = "";
@@ -917,12 +924,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJD4HJ663D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Kybele/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -940,12 +948,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UJD4HJ663D;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Kybele/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1083,7 +1092,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		3D4E961E23DC77C100D45214 /* RemoteSwiftPackageReference */ = {
+		3D4E961E23DC77C100D45214 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
 			requirement = {
@@ -1091,7 +1100,7 @@
 				minimumVersion = 19.0.0;
 			};
 		};
-		3D6FA1AD23DF0365005458A6 /* RemoteSwiftPackageReference */ = {
+		3D6FA1AD23DF0365005458A6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1099,7 +1108,7 @@
 				version = "5.0.0-rc.3";
 			};
 		};
-		3D6FA1B023E01F96005458A6 /* RemoteSwiftPackageReference */ = {
+		3D6FA1B023E01F96005458A6 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
 			requirement = {
@@ -1110,19 +1119,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		3D4E961F23DC77C200D45214 /* SwiftPackageProductDependency */ = {
+		3D4E961F23DC77C200D45214 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3D4E961E23DC77C100D45214 /* RemoteSwiftPackageReference */;
+			package = 3D4E961E23DC77C100D45214 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
 		};
-		3D6FA1AE23DF0365005458A6 /* SwiftPackageProductDependency */ = {
+		3D6FA1AE23DF0365005458A6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3D6FA1AD23DF0365005458A6 /* RemoteSwiftPackageReference */;
+			package = 3D6FA1AD23DF0365005458A6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		3D6FA1B123E01F96005458A6 /* SwiftPackageProductDependency */ = {
+		3D6FA1B123E01F96005458A6 /* SwifterSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 3D6FA1B023E01F96005458A6 /* RemoteSwiftPackageReference */;
+			package = 3D6FA1B023E01F96005458A6 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
 			productName = SwifterSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

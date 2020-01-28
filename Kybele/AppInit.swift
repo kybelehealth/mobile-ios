@@ -8,67 +8,30 @@
 
 import UIKit
 
-struct AppInit {
+public struct AppInit {
 
 }
 
-// MARK: - External Workers
 extension AppInit {
 
     var rootController: UIViewController {
+
+        //        if let _ = AppUser.value {
+        //            return welcomeController
+        //        }
+
         let didSkipOnboarding = UserDefaults.standard.bool(forKey: "onboardingShown")
 
-//        if let _ = AppUser.value {
-//            return welcomeController
-//        }
-
-//        return didSkipOnboarding ? loginController : onboardingController
-        return loginController
+        return didSkipOnboarding ? loginController : loginController
     }
 
-//  var onboardingController: UINavigationController {
-//      let controller = OnboardingViewController()
-//      let navigationController = UINavigationController(rootViewController: controller)
-//      navigationController.setupStyling()
-//
-//      controller.completionObservable
-//          .asObservable()
-//          .subscribe(onNext: { _ in
-//              self.rootControllerDefinedObserver.onNext(self.loginController)
-//          })
-//          .disposed(by: controller.bag)
-//
-//      return navigationController
-//  }
+    var onboardingController: UINavigationController {
+        let controller = LoginViewController() // TODO: Fix to actual Onboarding Controller
+        let navigationController = UINavigationController(rootViewController: controller)
+        navigationController.setupStyling()
 
-    //  var loginController: UINavigationController {
-    //      let controller = LoginViewController()
-    //      let navigationController = UINavigationController(rootViewController: controller)
-    //      navigationController.setupStyling()
-    //
-    //      controller.completionObservable
-    //          .asObservable()
-    //          .subscribe(onNext: { _ in
-    //              self.rootControllerDefinedObserver.onNext(self.welcomeController)
-    //          })
-    //          .disposed(by: controller.bag)
-    //
-    //      return navigationController
-    //  }
-
-
-//  var welcomeController: UIViewController {
-//      let controller = WelcomeViewController()
-//
-//      controller.completionObservable
-//          .asObservable()
-//          .subscribe(onNext: { _ in
-//              self.rootControllerDefinedObserver.onNext(self.homepageController)
-//          })
-//          .disposed(by: controller.bag)
-//
-//      return controller
-//  }
+        return navigationController
+    }
 
     var homepageController: UIViewController {
         let controller = HomepageViewController()
