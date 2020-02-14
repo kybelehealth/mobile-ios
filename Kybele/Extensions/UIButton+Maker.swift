@@ -16,7 +16,7 @@ extension UIButton {
                      backgroundColor: UIColor = .clear,
                      backgroundImage: UIImage? = nil,
                      image: UIImage? = nil,
-                     title: String = "",
+                     title: String = .empty,
                      titleColor: UIColor = .black,
                      font: UIFont = .boldSystemFont(ofSize: 17.0),
                      cornerRadius: CGFloat = 0) -> UIButton {

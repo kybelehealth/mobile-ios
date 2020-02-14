@@ -41,7 +41,6 @@ extension AppInit {
     }
 
     var loginController: UIViewController {
-        let controller = LoginViewController()
-        return controller
+        return LoginCoordinator().controller()
     }
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var coordinator: LoginCoordinator!
+
     // MARK: - Properties
 
     private lazy var viewSource: LoginView = {
@@ -17,26 +19,18 @@ class LoginViewController: UIViewController {
         return view
     }()
 
-    private var viewModel: LoginViewModel
+    private var viewModel: LoginViewModel = .init()
 
     // MARK: - Initialization
 
-    init() {
-        viewModel = LoginViewModel()
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
     override func loadView() {
         view = viewSource
+        addObserver()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewSource.startButton.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
+        viewSource.button.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
     }
 }
 
@@ -52,5 +46,14 @@ extension LoginViewController {
         }
 
         viewModel.login(with: email, phone: phone)
+    }
+}
+
+extension LoginViewController {
+
+    @objc private func addObserver() {
+        viewModel.handler = {
+            self.coordinator.showValidation()
+        }
     }
 }

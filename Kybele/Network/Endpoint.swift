@@ -11,7 +11,7 @@ import Alamofire
 
 struct URLKeys {
 
-    static let baseURL = "http://192.168.86.248:3000/"
+    static let baseURL = "https://api.kybelehealth.org/"
 }
 
 enum APIConfig: URLRequestConvertible {

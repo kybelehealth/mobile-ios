@@ -27,7 +27,7 @@ extension UILabel {
     static func make(ofSize size: CGFloat = 16,
                      strong: Bool = false,
                      alignment: NSTextAlignment = .left,
-                     defaultText: String = "",
+                     defaultText: String = .empty,
                      lines: Int = 1,
                      color: UIColor = .black,
                      isHidden: Bool = false,
