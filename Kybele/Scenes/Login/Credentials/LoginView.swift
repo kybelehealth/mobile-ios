@@ -10,19 +10,21 @@ import UIKit
 
 final class LoginView: UIView {
 
-    private let logoImageView: UIImageView = .make(withName: "kybele_logo")
+    // MARK: - Declaration
 
-    let emailTextField: TextInputField = .init(placeholder: "Enter Email".localized(), contentType: .email)
+    private lazy var logoImageView: UIImageView = .make(withName: "kybele_logo")
 
-    let phoneTextField: TextInputField = .init(placeholder: "Phone Number".localized(), contentType: .phone)
+    lazy var emailTextField: TextInputField = .init(placeholder: "Enter Email".localized(), contentType: .email)
 
-    let button: UIButton = .make(backgroundColor: .kybelePurple,
-                                 title: "Sign Up".localized(),
-                                 titleColor: .white,
-                                 font: UIFont.boldSystemFont(ofSize: 20),
-                                 cornerRadius: 24)
+    lazy var phoneTextField: TextInputField = .init(placeholder: "Phone Number".localized(), contentType: .phone)
 
-    // MARK: - Initialization
+    lazy var button: UIButton = .make(backgroundColor: .kybelePurple,
+                                      title: "Sign Up".localized(),
+                                      titleColor: .white,
+                                      font: UIFont.boldSystemFont(ofSize: 20),
+                                      cornerRadius: 24)
+
+    // MARK: - Setup
 
     init() {
         super.init(frame: .zero)

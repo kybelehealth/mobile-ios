@@ -10,6 +10,11 @@ import UIKit
 
 final class LoginProfileView: UIView {
 
+    // MARK: - Declaration
+
+
+    // MARK: - Setup
+
     init() {
         super.init(frame: .zero)
     }

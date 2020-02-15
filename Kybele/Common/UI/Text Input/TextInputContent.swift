@@ -40,6 +40,7 @@ extension TextInputContent {
         switch self {
         case .phone: return 17
         case .address: return 5
+        case .smsCode: return 6
         default : return 0
         }
     }
@@ -63,6 +64,16 @@ extension TextInputContent {
         switch self {
         case .address:
             return "At least \(minLength) characters".localized()
+
+        case .email:
+            return "eg. example@gmail.com".localized()
+
+        case .phone:
+            return "eg. 0 (530) 123 45 67".localized()
+
+        case .smsCode:
+            return "eg. 123456".localized()
+
         default:
             return .empty
         }

@@ -11,17 +11,19 @@ import SnapKit
 
 final class LoginVerificationView: UIView {
 
-    private let messageLabel = UILabel.make(defaultText: "Please enter the code we’ve sent you via SMS.".localized(), lines: 0)
+    // MARK: - Declaration
 
-    let smsTextField: TextInputField = .init(placeholder: "Enter Code".localized(), contentType: .smsCode)
+    private lazy var messageLabel = UILabel.make(defaultText: "Please enter the code we’ve sent you via SMS.".localized(), lines: 0)
 
-    let button = UIButton.make(backgroundColor: .kybelePurple,
-                               title: "Continue".localized(),
-                               titleColor: .white,
-                               font: UIFont.boldSystemFont(ofSize: 20),
-                               cornerRadius: 24)
+    lazy var smsTextField: TextInputField = .init(placeholder: "Enter Code".localized(), contentType: .smsCode)
 
-    // MARK: - Initialization
+    lazy var button = UIButton.make(backgroundColor: .kybelePurple,
+                                    title: "Continue".localized(),
+                                    titleColor: .white,
+                                    font: UIFont.boldSystemFont(ofSize: 20),
+                                    cornerRadius: 24)
+
+    // MARK: - Setup
 
     init() {
         super.init(frame: .zero)

@@ -12,7 +12,9 @@ final class LoginVerificationViewModel: ViewModel {
 
     var handler: () -> Void = {}
 
-    func verify(with code: String) {
+    func verify(with code: String?) {
+
+        guard let code = code else { return }
 
         handler()
 

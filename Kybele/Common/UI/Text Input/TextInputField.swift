@@ -16,17 +16,9 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
 
     var onChangeTextField: (String?) -> Void = { _ in }
 
-    var isValid = true {
-        didSet {
-            if isValid {
-                input.layer.borderColor = UIColor.clear.cgColor
-                hintLabel.isHidden = true
-            } else {
-                input.layer.borderWidth = 1.0
-                input.layer.borderColor = UIColor.red.cgColor
-                hintLabel.isHidden = false
-            }
-        }
+
+    func invalidate() {
+        isValid = false
     }
 
     var text: String? {
@@ -57,15 +49,24 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
         input.resignFirstResponder()
     }
 
+    internal var isValid = true {
+        didSet {
+            setValidation()
+        }
+    }
+
     private var initialValue: String?
 
     private var placeholder: String
 
     private var contentType: TextInputContent
 
-    private var input = UITextField()
+    private let input = UITextField()
 
     private let hintLabel = UILabel.make(ofSize: 12, alignment: .right, lines: 2, color: .gray, isHidden: true)
+
+    private let line = UIView()
+
 
     // MARK: View Lifecycle
 
@@ -78,8 +79,6 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
         super.init(frame: .zero)
 
         hintLabel.text = contentType.hint
-
-        input.addLine()
 
         backgroundColor = .white
 
@@ -96,6 +95,9 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
         input.spellCheckingType = .no
 
         input.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+
+        setValidation()
+
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -104,7 +106,7 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
 
     private func setupViews() {
 
-        addSubview(input)
+        addSubviews([input, line])
         input.addSubview(hintLabel)
 
         input.snp.makeConstraints {
@@ -115,6 +117,12 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
         hintLabel.snp.makeConstraints {
             $0.top.bottom.trailing.equalTo(input)
             $0.leading.equalTo(input.snp.centerX)
+        }
+
+        line.snp.makeConstraints {
+            $0.height.equalTo(1)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
     }
 
@@ -132,6 +140,31 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
     private func styleAsPlaceholder() {
         input.text = placeholder
         input.textColor = .gray
+    }
+}
+
+// MARK: - Validation
+
+extension TextInputField {
+
+    private func setValidation() {
+        if isValid {
+            setStyleValid()
+        } else {
+            setStyleInvalid()
+        }
+    }
+
+    private func setStyleValid() {
+        hintLabel.isHidden = true
+        line.backgroundColor = .kybelePurple
+        input.textColor = .kybelePurple
+    }
+
+    private func setStyleInvalid() {
+        hintLabel.isHidden = false
+        line.backgroundColor = .red
+        input.textColor = .red
     }
 }
 

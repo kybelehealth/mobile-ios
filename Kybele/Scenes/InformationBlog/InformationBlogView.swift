@@ -10,7 +10,9 @@ import UIKit
 
 class InformationBlogView: UIView {
 
-    let collectionView: UICollectionView = {
+    // MARK: - Declaration
+
+    lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = Sizes.homepageInteritemSpace
         layout.minimumInteritemSpacing = Sizes.homepageInteritemSpace
@@ -21,6 +23,8 @@ class InformationBlogView: UIView {
         cv.register(InformationBlogCell.self, forCellWithReuseIdentifier: InformationBlogCell.identifier)
         return cv
     }()
+
+    // MARK: - Setup
 
     init() {
         super.init(frame: .zero)

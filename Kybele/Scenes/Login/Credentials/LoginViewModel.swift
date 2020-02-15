@@ -12,7 +12,12 @@ final class LoginViewModel: ViewModel {
 
     var handler: () -> Void = {}
 
-    func login(with email: String, phone: String) {
+    func login(with email: String?, phone: String?) {
+
+        guard
+            let email = email,
+            let phone = phone
+            else { return }
 
         let endpoint = APIConfig.login(email: email, phone: phone, languageId: 1)
 

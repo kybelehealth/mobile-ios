@@ -10,6 +10,8 @@ import UIKit
 
 class HomepageView: UIView {
 
+    // MARK: - Declaration
+
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = Sizes.homepageInteritemSpace
@@ -36,7 +38,8 @@ class HomepageView: UIView {
     lazy var leftBarButtonItem: UIBarButtonItem = .init(customView: languageButton)
 
 
-    // MARK: - Initialization
+    // MARK: - Setup
+
     init() {
         super.init(frame: .zero)
         addSubviews([collectionView])

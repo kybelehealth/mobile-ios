@@ -30,15 +30,25 @@ final class LoginViewController: UIViewController {
 
 private extension LoginViewController {
 
-    @objc func buttonPressed() {
-
-        guard
-            let email = viewSource.emailTextField.text,
-            let phone = viewSource.phoneTextField.text else
-        {
-            return
+    var phone: String? {
+        let text = viewSource.phoneTextField.text.ifNil(.empty)
+        if text.count < TextInputContent.phone.minLength {
+            viewSource.phoneTextField.invalidate()
+            return nil
         }
+        return text
+    }
 
+    var email: String? {
+        let text = viewSource.emailTextField.text.ifNil(.empty)
+        if !text.isValidEmail {
+            viewSource.emailTextField.invalidate()
+            return nil
+        }
+        return text
+    }
+
+    @objc func buttonPressed() {
         viewModel.login(with: email, phone: phone)
     }
 }
