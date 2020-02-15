@@ -10,7 +10,7 @@ import UIKit
 
 class NewRecordView: UIView {
 
-    private let button = UIButton.make(horizontalAlignment: .center, verticalAlignment: .center, backgroundColor: .purple, title: "Add New", titleColor: .white, font: .boldSystemFont(ofSize: 20), cornerRadius: 24)
+    private let button = UIButton.make(horizontalAlignment: .center, verticalAlignment: .center, backgroundColor: .purple, title: "Add New".localized(), titleColor: .white, font: .boldSystemFont(ofSize: 20), cornerRadius: 24)
 
     init() {
         super.init(frame: .zero)

@@ -75,6 +75,7 @@
 		3DBEC1DA23F7E602005BDAA5 /* LoginProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC1D623F7E602005BDAA5 /* LoginProfileViewController.swift */; };
 		3DBEC1DB23F7E602005BDAA5 /* LoginProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC1D723F7E602005BDAA5 /* LoginProfileView.swift */; };
 		3DBEC1DC23F7E602005BDAA5 /* LoginProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC1D823F7E602005BDAA5 /* LoginProfileViewModel.swift */; };
+		3DBEC1DE23F7FA09005BDAA5 /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBEC1DD23F7FA09005BDAA5 /* Localize_Swift.framework */; };
 		3DF9C4B323EEBD9B00074729 /* LoginVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9C4B223EEBD9B00074729 /* LoginVerificationViewController.swift */; };
 		3DF9C4B523EEBDF100074729 /* LoginVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9C4B423EEBDF100074729 /* LoginVerificationView.swift */; };
 		3DF9C4B723EEBE3D00074729 /* LoginVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9C4B623EEBE3D00074729 /* LoginVerificationViewModel.swift */; };
@@ -176,6 +177,7 @@
 		3DBEC1D623F7E602005BDAA5 /* LoginProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProfileViewController.swift; sourceTree = "<group>"; };
 		3DBEC1D723F7E602005BDAA5 /* LoginProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProfileView.swift; sourceTree = "<group>"; };
 		3DBEC1D823F7E602005BDAA5 /* LoginProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProfileViewModel.swift; sourceTree = "<group>"; };
+		3DBEC1DD23F7FA09005BDAA5 /* Localize_Swift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Localize_Swift.framework; path = Carthage/Build/iOS/Localize_Swift.framework; sourceTree = "<group>"; };
 		3DF9C4B223EEBD9B00074729 /* LoginVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificationViewController.swift; sourceTree = "<group>"; };
 		3DF9C4B423EEBDF100074729 /* LoginVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificationView.swift; sourceTree = "<group>"; };
 		3DF9C4B623EEBE3D00074729 /* LoginVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificationViewModel.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D72902723E02A1B00FE094A /* Kingfisher.framework in Frameworks */,
+				3DBEC1DE23F7FA09005BDAA5 /* Localize_Swift.framework in Frameworks */,
 				3D6FA1AF23DF0365005458A6 /* Alamofire in Frameworks */,
 				3D6FA1B223E01F96005458A6 /* SwifterSwift in Frameworks */,
 				3D4E962023DC77C200D45214 /* KeychainSwift in Frameworks */,
@@ -520,6 +523,7 @@
 		D8C480923C1E182DA2BC42FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DBEC1DD23F7FA09005BDAA5 /* Localize_Swift.framework */,
 				3D72902923E02CBF00FE094A /* Lottie.framework */,
 				3D72902623E02A1B00FE094A /* Kingfisher.framework */,
 				3D72902123E025CB00FE094A /* SnapKit.framework */,
@@ -740,12 +744,14 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Localize_Swift.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Localize_Swift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

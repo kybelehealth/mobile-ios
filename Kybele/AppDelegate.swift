@@ -6,6 +6,7 @@
 //  Copyright © 2019 Rufat Mirza. All rights reserved.
 //
 
+import Localize_Swift
 import SwifterSwift
 import UIKit
 

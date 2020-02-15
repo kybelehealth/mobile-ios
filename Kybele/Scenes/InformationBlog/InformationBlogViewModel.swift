@@ -10,7 +10,7 @@ import UIKit
 
 class InformationBlogViewModel {
 
-    let pageTitle: String = "Information Blog"
+    let pageTitle: String = "Information Blog".localized()
 
     let items: [InformationBlog] = [
         InformationBlog(

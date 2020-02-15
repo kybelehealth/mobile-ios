@@ -10,7 +10,7 @@ import UIKit
 
 class HealthRecordsViewModel {
 
-    let pageTitle: String = "Health Records"
+    let pageTitle: String = "Health Records".localized()
 
     let items: [String] = [
         "Record #1",

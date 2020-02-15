@@ -10,11 +10,11 @@ import UIKit
 
 class HealthProfileViewModel {
 
-    let pageTitle: String = "Health Profile"
+    let pageTitle: String = "Health Profile".localized()
 
     let items: [String] = [
-        "Personal Health Information",
-        "My Pregnancy",
-        "Child Information"
+        "Personal Health Information".localized(),
+        "My Pregnancy".localized(),
+        "Child Information".localized()
     ]
 }

@@ -14,38 +14,37 @@ class HomepageViewModel: ViewModel {
 
     let navigationItems: [HomepageNavigationItem] = [
         HomepageNavigationItem(
-            name: "Calendar",
+            name: "Calendar".localized(),
             iconImage: UIImage(named: "ico_calendar")!,
             destinationController: UIViewController()
         ),
         HomepageNavigationItem(
-            name: "Health Profile",
+            name: "Health Profile".localized(),
             iconImage: UIImage(named: "ico_my_health_profile")!,
             destinationController: HealthProfileViewController(style: .plain)
         ),
         HomepageNavigationItem(
-            name: "Health Records",
+            name: "Health Records".localized(),
             iconImage: UIImage(named: "ico_my_health_records")!,
             destinationController: HealthRecordsViewController(style: .plain)
         ),
         HomepageNavigationItem(
-            name: "Information Blog",
+            name: "Information Blog".localized(),
             iconImage: UIImage(named: "ico_health_information")!,
             destinationController: InformationBlogViewController()
         ),
         HomepageNavigationItem(
-            name: "Nearby Health Centers",
+            name: "Nearby Health Centers".localized(),
             iconImage: UIImage(named: "ico_nearby_health_centers")!,
             destinationController: UIViewController()
         ),
         HomepageNavigationItem(
-            name: "Emergency Button",
+            name: "Emergency Button".localized(),
             iconImage: UIImage(named: "ico_emergency_button")!,
             destinationController: UIViewController()
         )
     ]
 }
-
 
 struct HomepageNavigationItem {
 

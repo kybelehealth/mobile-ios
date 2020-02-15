@@ -12,7 +12,6 @@ class HomepageViewController: UIViewController {
 
     var coordinator: HomepageCoordinator!
 
-    // MARK: - Properties
     private lazy var viewSource: HomepageView = {
         let view = HomepageView()
         view.collectionView.dataSource = self
@@ -22,7 +21,6 @@ class HomepageViewController: UIViewController {
 
     private var viewModel: HomepageViewModel
 
-    // MARK: - Initialization
     init() {
         viewModel = HomepageViewModel()
         super.init(nibName: nil, bundle: nil)

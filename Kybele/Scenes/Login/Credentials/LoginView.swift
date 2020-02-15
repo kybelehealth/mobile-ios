@@ -12,12 +12,12 @@ final class LoginView: UIView {
 
     private let logoImageView: UIImageView = .make(withName: "kybele_logo")
 
-    let emailTextField: TextInputField = .init(placeholder: "Enter Email", contentType: .email)
+    let emailTextField: TextInputField = .init(placeholder: "Enter Email".localized(), contentType: .email)
 
-    let phoneTextField: TextInputField = .init(placeholder: "Phone Number", contentType: .phone)
+    let phoneTextField: TextInputField = .init(placeholder: "Phone Number".localized(), contentType: .phone)
 
     let button: UIButton = .make(backgroundColor: .kybelePurple,
-                                 title: "Sign Up",
+                                 title: "Sign Up".localized(),
                                  titleColor: .white,
                                  font: UIFont.boldSystemFont(ofSize: 20),
                                  cornerRadius: 24)

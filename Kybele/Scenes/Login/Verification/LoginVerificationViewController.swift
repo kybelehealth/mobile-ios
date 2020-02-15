@@ -23,7 +23,7 @@ final class LoginVerificationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Enter Password"
+        title = "Enter Password".localized()
         viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         addViewModelObserver()
     }

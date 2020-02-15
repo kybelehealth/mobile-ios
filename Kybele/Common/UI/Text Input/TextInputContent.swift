@@ -62,7 +62,7 @@ extension TextInputContent {
     var hint: String {
         switch self {
         case .address:
-            return "At least \(minLength) characters"
+            return "At least \(minLength) characters".localized()
         default:
             return .empty
         }
