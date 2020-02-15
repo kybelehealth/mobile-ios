@@ -10,6 +10,8 @@ import UIKit
 
 class HomepageViewController: UIViewController {
 
+    var coordinator: HomepageCoordinator!
+
     // MARK: - Properties
     private lazy var viewSource: HomepageView = {
         let view = HomepageView()

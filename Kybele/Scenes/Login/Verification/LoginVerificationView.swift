@@ -27,15 +27,10 @@ final class LoginVerificationView: UIView {
         super.init(frame: .zero)
         backgroundColor = .white
 
-        smsTextField.snp.makeConstraints {
-            $0.height.equalTo(40)
-        }
-
         let mainStack = UIStackView(arrangedSubviews: [messageLabel,
                                                        smsTextField])
         mainStack.spacing = 40
         mainStack.axis = .vertical
-
 
         addSubviews([mainStack, button])
 

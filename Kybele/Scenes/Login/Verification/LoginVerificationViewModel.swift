@@ -9,5 +9,13 @@
 import Foundation
 
 final class LoginVerificationViewModel: ViewModel {
-    
+
+    var handler: () -> Void = {}
+
+    func verify(with code: String) {
+
+        handler()
+
+        // TODO: Network Code
+    }
 }

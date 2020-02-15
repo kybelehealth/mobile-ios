@@ -54,23 +54,20 @@ extension TextInputContent {
 
     var mask: String? {
         switch self {
-        case .phone:    return "X (XXX) XXX XX XX"
-        default:        return nil
+        case .phone: return "X (XXX) XXX XX XX"
+        default: return nil
         }
     }
 
     var hint: String {
         switch self {
-
         case .address:
             return "At least \(minLength) characters"
-
         default:
             return .empty
         }
     }
 }
-
 
 extension String {
 

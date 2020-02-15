@@ -13,5 +13,4 @@ protocol View {
     associatedtype VS: UIView
     var viewSource: VS { get }
     var viewModel: VM { get }
-    var loadingView: LoadingView { get }
 }

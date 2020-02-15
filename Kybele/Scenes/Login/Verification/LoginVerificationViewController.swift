@@ -8,23 +8,43 @@
 
 import UIKit
 
-class LoginVerificationViewController: UIViewController {
+final class LoginVerificationViewController: UIViewController {
 
     var coordinator: LoginVerificationCoordinator!
 
-    private lazy var viewSource: LoginVerificationView = {
-        let view = LoginVerificationView()
-        return view
-    }()
-
-    private var viewModel: LoginVerificationViewModel = .init()
+    private var viewModel: LoginVerificationViewModel!
+    private var viewSource: LoginVerificationView!
 
     override func loadView() {
+        viewModel = LoginVerificationViewModel()
+        viewSource = LoginVerificationView()
         view = viewSource
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Enter Password"
+        viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        addViewModelObserver()
+    }
+}
+
+private extension LoginVerificationViewController {
+
+    @objc func buttonPressed() {
+        guard let code = viewSource.smsTextField.text else {
+            return
+        }
+
+        viewModel.verify(with: code)
+    }
+}
+
+private extension LoginVerificationViewController {
+
+    @objc func addViewModelObserver() {
+        viewModel.handler = {
+            self.coordinator.showProfileEditor()
+        }
     }
 }

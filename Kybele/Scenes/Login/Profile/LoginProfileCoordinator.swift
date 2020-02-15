@@ -1,14 +1,14 @@
 //
-//  LoginVerificationCoordinator.swift
+//  LoginProfileCoordinator.swift
 //  Kybele
 //
-//  Created by Rufat Mirza on 13.02.2020.
+//  Created by Rufat Mirza on 15.02.2020.
 //  Copyright © 2020 Rufat Mirza. All rights reserved.
 //
 
 import UIKit
 
-final class LoginVerificationCoordinator: Coordinator {
+final class LoginProfileCoordinator: Coordinator {
 
     private weak var navigator: UINavigationController!
 
@@ -17,13 +17,10 @@ final class LoginVerificationCoordinator: Coordinator {
     }
 
     func start() {
-        let controller = LoginVerificationViewController()
+
+        let controller = LoginProfileViewController()
         controller.coordinator = self
 
         navigator.pushViewController(controller)
-    }
-
-    func showProfileEditor() {
-        LoginProfileCoordinator(navigator: navigator).start()
     }
 }

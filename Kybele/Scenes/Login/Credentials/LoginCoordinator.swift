@@ -13,19 +13,14 @@ final class LoginCoordinator: Coordinator {
     var navigator: UINavigationController!
 
     func controller() -> UIViewController {
-        let vc = LoginViewController()
-        vc.coordinator = self
-
-        let navigator = UINavigationController(rootViewController: vc)
-        self.navigator = navigator
+        let controller = LoginViewController()
+        controller.coordinator = self
+        navigator = UINavigationController(rootViewController: controller)
 
         return navigator
     }
 
     func showValidation() {
-        let vc = LoginVerificationViewController()
-        navigator.pushViewController(vc)
+        LoginVerificationCoordinator(navigator: navigator).start()
     }
-
-    func start() {}
 }

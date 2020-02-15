@@ -8,35 +8,29 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     var coordinator: LoginCoordinator!
 
-    // MARK: - Properties
-
-    private lazy var viewSource: LoginView = {
-        let view = LoginView()
-        return view
-    }()
-
-    private var viewModel: LoginViewModel = .init()
-
-    // MARK: - Initialization
+    private var viewModel: LoginViewModel!
+    private var viewSource: LoginView!
 
     override func loadView() {
+        viewModel = LoginViewModel()
+        viewSource = LoginView()
         view = viewSource
-        addObserver()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewSource.button.addTarget(self, action: #selector(signupButtonPressed), for: .touchUpInside)
+        viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        addViewModelObserver()
     }
 }
 
-extension LoginViewController {
+private extension LoginViewController {
 
-    @objc private func signupButtonPressed() {
+    @objc func buttonPressed() {
 
         guard
             let email = viewSource.emailTextField.text,
@@ -49,9 +43,9 @@ extension LoginViewController {
     }
 }
 
-extension LoginViewController {
+private extension LoginViewController {
 
-    @objc private func addObserver() {
+    @objc func addViewModelObserver() {
         viewModel.handler = {
             self.coordinator.showValidation()
         }

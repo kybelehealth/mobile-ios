@@ -27,14 +27,6 @@ final class LoginView: UIView {
     init() {
         super.init(frame: .zero)
 
-        emailTextField.snp.makeConstraints {
-            $0.height.equalTo(40)
-        }
-
-        phoneTextField.snp.makeConstraints {
-            $0.height.equalTo(40)
-        }
-
         let mainStack = UIStackView(arrangedSubviews: [logoImageView,
                                                        emailTextField,
                                                        phoneTextField])
