@@ -14,9 +14,9 @@ final class LoginView: UIView {
 
     private lazy var logo: UIImageView = .make(withName: "kybele_logo")
 
-    lazy var emailField: TextInputField = .init("Enter Email".localized(), type: .email)
+    lazy var emailField: TextInputField = .init(type: .email)
 
-    lazy var phoneField: TextInputField = .init("Phone Number".localized(), type: .phone)
+    lazy var phoneField: TextInputField = .init(type: .phone)
 
     lazy var button: UIButton = .make(backgroundColor: .kybelePurple,
                                       title: "Sign Up".localized(),
@@ -28,7 +28,8 @@ final class LoginView: UIView {
 
     init() {
         super.init(frame: .zero)
-
+        backgroundColor = .kybeleLightPurple
+        
         let mainStack = UIStackView(arrangedSubviews: [logo,
                                                        emailField,
                                                        phoneField])

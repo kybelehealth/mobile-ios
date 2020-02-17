@@ -17,4 +17,8 @@ extension UIColor {
     class var kybeleGray: UIColor {
         return UIColor(named: "kybeleGray")!
     }
+    
+    class var kybeleLightPurple: UIColor {
+        return UIColor(named: "kybeleLightPurple")!
+    }
 }

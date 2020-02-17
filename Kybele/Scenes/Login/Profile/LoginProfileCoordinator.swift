@@ -22,4 +22,8 @@ final class LoginProfileCoordinator: Coordinator {
         controller.interactor.coordinator = self
         navigator.pushViewController(controller)
     }
+    
+    func showLegalPages() {
+        LoginTermsCoordinator(navigator: navigator).start()
+    }
 }

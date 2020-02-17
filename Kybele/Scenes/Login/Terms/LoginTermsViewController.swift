@@ -22,7 +22,7 @@ final class LoginTermsViewController: UIViewController {
         super.viewDidLoad()
 
         view.startLoadingIndicatorView()
-        navigationItem.title = "LoginTerms"
+        navigationItem.title = "Personal Data"
         prepareContent()
     }
 }
@@ -30,7 +30,11 @@ final class LoginTermsViewController: UIViewController {
 private extension LoginTermsViewController {
 
     @objc func prepareContent() {
-        // Bind Interactor with PromiseKit
-        
+        interactor.start().done { [weak self] display in
+            self?.viewSource.body.attributedText = display
+        }.ensure { [weak self] in
+            self?.view.stopLoadingIndicatorView()
+        }
+        .cauterize()
     }
 }

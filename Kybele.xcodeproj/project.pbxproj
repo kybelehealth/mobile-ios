@@ -28,6 +28,7 @@
 		3D72902723E02A1B00FE094A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D72902623E02A1B00FE094A /* Kingfisher.framework */; };
 		3D72902A23E02CBF00FE094A /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D72902923E02CBF00FE094A /* Lottie.framework */; };
 		3D72903223E046D100FE094A /* Any+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72903123E046D100FE094A /* Any+Additions.swift */; };
+		3D742A3C23FB2975005AE0F7 /* UIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D742A3B23FB2975005AE0F7 /* UIScrollView+Additions.swift */; };
 		3D7635ED23F59347006FA3F7 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7635EC23F59347006FA3F7 /* Coordinator.swift */; };
 		3D7635EF23F5936A006FA3F7 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7635EE23F5936A006FA3F7 /* LoginCoordinator.swift */; };
 		3D7635F123F5941C006FA3F7 /* LoginVerificationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7635F023F5941C006FA3F7 /* LoginVerificationCoordinator.swift */; };
@@ -129,6 +130,7 @@
 		3D72902623E02A1B00FE094A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		3D72902923E02CBF00FE094A /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
 		3D72903123E046D100FE094A /* Any+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Any+Additions.swift"; sourceTree = "<group>"; };
+		3D742A3B23FB2975005AE0F7 /* UIScrollView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		3D7635EC23F59347006FA3F7 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		3D7635EE23F5936A006FA3F7 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		3D7635F023F5941C006FA3F7 /* LoginVerificationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificationCoordinator.swift; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 				3DA4F0EB23A5397F001A2B97 /* UIStackView+Maker.swift */,
 				3D4E961A23DC600700D45214 /* UIView+Additions.swift */,
 				3DA4F0D623A51015001A2B97 /* UIView+Loading.swift */,
+				3D742A3B23FB2975005AE0F7 /* UIScrollView+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -857,6 +860,7 @@
 				3DA4F0F523A53C6F001A2B97 /* WebViewController.swift in Sources */,
 				3DA4F0D723A51015001A2B97 /* UIView+Loading.swift in Sources */,
 				3DA4F0FF23A54EE7001A2B97 /* HealthRecordsViewModel.swift in Sources */,
+				3D742A3C23FB2975005AE0F7 /* UIScrollView+Additions.swift in Sources */,
 				3DBEC1DC23F7E602005BDAA5 /* LoginProfileInteractor.swift in Sources */,
 				3D4E961523DC505E00D45214 /* LoginView.swift in Sources */,
 				3DF9C4B323EEBD9B00074729 /* LoginVerificationViewController.swift in Sources */,

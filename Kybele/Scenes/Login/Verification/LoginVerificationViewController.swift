@@ -27,17 +27,11 @@ final class LoginVerificationViewController: UIViewController {
 
 private extension LoginVerificationViewController {
 
-    var code: String? {
-        let text = viewSource.smsField.text.ifNil(.empty)
-        if text.count < TextInputContent.smsCode.minLength {
-            viewSource.smsField.invalidate()
-            return nil
-        }
-        return text
-    }
-
     @objc func buttonPressed() {
-        guard let code = code else { return }
+        
+        let codeText = viewSource.smsField.validText()
+        
+        guard let code = codeText else { return }
 
         interactor.verify(with: code)
         .done {

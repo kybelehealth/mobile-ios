@@ -17,11 +17,12 @@ final class LoginCoordinator: Coordinator {
         controller.interactor = LoginInteractor()
         controller.interactor.coordinator = self
         navigator = UINavigationController(rootViewController: controller)
-
+        navigator.setupStyling()
         return navigator
     }
 
     func showValidation(with authId: String) {
-        LoginVerificationCoordinator(navigator: navigator).start(with: authId)
+//        LoginVerificationCoordinator(navigator: navigator).start(with: authId)
+        LoginTermsCoordinator(navigator: navigator).start()
     }
 }

@@ -9,22 +9,56 @@
 import UIKit
 
 enum TextInputContent {
-    case phone
     case email
+    case phone
     case smsCode
-    case password
+    case name
+    case surname
     case address
-    case none
 }
 
 extension TextInputContent {
 
+    var placeholder: String {
+        let text: String
+        
+        switch self {
+        case .email:
+            text = "Enter Email"
+        case .phone:
+            text = "Phone Number"
+        case .smsCode:
+            text = "Enter Code"
+        case .name:
+            text = "Name"
+        case .surname:
+            text = "Surname"
+        case .address:
+            text = "Address"
+        }
+        
+        return text.localized()
+    }
+    
+    
     var keyboardType: UIKeyboardType {
         switch self {
-        case .phone, .smsCode: return .numberPad
+        case .phone: return .phonePad
+        case .smsCode: return .numberPad
         case .email: return .emailAddress
-        case .password: return .asciiCapable
         default: return .default
+        }
+    }
+    
+
+    func isValid(text: String?) -> Bool {
+        let immutableText = text.ifNil(.empty)
+        switch self {
+        case .email:
+            return immutableText.isValidEmail
+            
+        default:
+            return immutableText.count >= self.minLength
         }
     }
 
@@ -36,23 +70,16 @@ extension TextInputContent {
         }
     }
 
-    var minLength: Int {
+    private var minLength: Int {
         switch self {
         case .phone: return 17
         case .address: return 5
         case .smsCode: return 6
+        case .name, .surname: return 2
         default : return 0
         }
     }
-
-    var isSecureTextEntry: Bool {
-        return self == .password ? true : false
-    }
-
-    var defaultPlaceholder: String {
-        return .empty
-    }
-
+    
     var mask: String? {
         switch self {
         case .phone: return "X (XXX) XXX XX XX"

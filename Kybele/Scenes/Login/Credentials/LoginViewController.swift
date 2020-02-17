@@ -27,31 +27,18 @@ final class LoginViewController: UIViewController {
 
 private extension LoginViewController {
 
-    var phone: String? {
-        let text = viewSource.phoneField.text.ifNil(.empty)
-        if text.count < TextInputContent.phone.minLength {
-            viewSource.phoneField.invalidate()
-            return nil
-        }
-        return text
-    }
-
-    var email: String? {
-        let text = viewSource.emailField.text.ifNil(.empty)
-        if !text.isValidEmail {
-            viewSource.emailField.invalidate()
-            return nil
-        }
-        return text
-    }
-
     @objc func buttonPressed() {
+        
+        let phoneText = viewSource.phoneField.validText()
+        let emailText = viewSource.emailField.validText()
 
-        guard let email = email, let phone = phone else { return }
+        guard
+            let email = emailText,
+            let phone = phoneText else { return }
 
         interactor.login(with: email, phone: phone)
         .done { [weak self] response in
-            self?.interactor.coordinator.showValidation(with: response.authyId!)
+            self?.interactor.coordinator.showValidation(with: "123456")
         }
         .cauterize()
     }

@@ -10,18 +10,29 @@ import UIKit
 
 class TextInputField: UIView, UITextFieldDelegate, Invalidable {
 
-    // MARK: API
-
     weak var delegate: UITextFieldDelegate?
 
-    var onChangeTextField: (String?) -> Void = { _ in }
-
-
-    func invalidate() {
+    private func invalidate() {
         isValid = false
     }
 
-    var text: String? {
+    func validText() -> String? {
+        if contentType.isValid(text: text) {
+            return text
+        }
+        invalidate()
+        return nil
+    }
+
+    // MARK: Private
+    
+    internal var isValid = true {
+        didSet {
+            setValidation()
+        }
+    }
+    
+    private var text: String? {
         get {
             return (input.text == placeholder) ? nil : input.text
         } set {
@@ -38,23 +49,7 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
             }
         }
     }
-
-    func remaskTextField() {
-        if input.text != placeholder {
-            textFieldDidChange(input)
-        }
-    }
-
-    func resignKeyboard() {
-        input.resignFirstResponder()
-    }
-
-    internal var isValid = true {
-        didSet {
-            setValidation()
-        }
-    }
-
+    
     private var initialValue: String?
 
     private var placeholder: String
@@ -70,9 +65,9 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
 
     // MARK: View Lifecycle
 
-    init(_ placeholder: String = .empty, type: TextInputContent = .none) {
+    init(type: TextInputContent) {
 
-        self.placeholder = placeholder
+        self.placeholder = type.placeholder
         self.contentType = type
         self.hintLabel.text = type.hint
 
@@ -80,12 +75,10 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
 
         hintLabel.text = type.hint
 
-        backgroundColor = .white
-
         input.inputAccessoryView = KeyboardAccessoryView(for: input)
 
         setupViews()
-
+ 
         styleAsPlaceholder()
 
         setupTextField()
@@ -129,7 +122,6 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
     private func setupTextField() {
         input.delegate = self
         input.keyboardType = contentType.keyboardType
-        input.isSecureTextEntry = contentType.isSecureTextEntry
     }
 
     private func styleAsUserInput() {
@@ -158,7 +150,6 @@ extension TextInputField {
     private func setStyleValid() {
         hintLabel.isHidden = true
         line.backgroundColor = .kybelePurple
-        input.textColor = .kybelePurple
     }
 
     private func setStyleInvalid() {
@@ -170,7 +161,7 @@ extension TextInputField {
 
 // MARK: Text Field Delegate Methods
 
-extension TextInputField {
+internal extension TextInputField {
 
     func textField(_ textField: UITextField,
                    shouldChangeCharactersIn range: NSRange,
@@ -192,11 +183,8 @@ extension TextInputField {
     }
 
     func textFieldDidBeginEditing(_ textField: UITextField) {
-
         isValid = true
-
         guard textField.text == placeholder else { return }
-
         styleAsUserInput()
     }
 
@@ -206,16 +194,10 @@ extension TextInputField {
     }
 
     @objc private func textFieldDidChange(_ tf: UITextField) {
-
-        guard let text = tf.text else { return }
-
-        onChangeTextField(tf.text)
-
-        if contentType == .phone {
-
-            if let mask = contentType.mask {
-                input.text = text.formatNumber(with: mask)
-            }
-        }
+        guard contentType == .phone,
+            let text = tf.text,
+            let mask = contentType.mask else { return }
+        
+        input.text = text.formatNumber(with: mask)
     }
 }

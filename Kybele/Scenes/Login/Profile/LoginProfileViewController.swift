@@ -21,5 +21,22 @@ final class LoginProfileViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "LoginProfile"
+        viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+    }
+}
+
+private extension LoginProfileViewController {
+
+    @objc func buttonPressed() {
+        
+        var nameText = viewSource.nameField.validText()
+        var surname = viewSource.surnameField.validText()
+        var address = viewSource.addressField.validText()
+        
+        interactor.submit()
+        .done {
+            self.interactor.coordinator.showLegalPages()
+        }
+        .cauterize()
     }
 }
