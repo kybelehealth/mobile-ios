@@ -10,13 +10,10 @@ import UIKit
 
 final class LoginProfileViewController: UIViewController {
 
-    var coordinator: LoginProfileCoordinator!
-
-    private var viewModel: LoginProfileViewModel!
+    var interactor: LoginProfileInteractor!
     private var viewSource: LoginProfileView!
 
     override func loadView() {
-        viewModel = LoginProfileViewModel()
         viewSource = LoginProfileView()
         view = viewSource
     }

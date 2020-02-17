@@ -10,13 +10,11 @@ import UIKit
 
 final class LoginViewController: UIViewController {
 
-    var coordinator: LoginCoordinator!
+    var interactor: LoginInteractor!
 
-    private var viewModel: LoginViewModel!
     private var viewSource: LoginView!
 
     override func loadView() {
-        viewModel = LoginViewModel()
         viewSource = LoginView()
         view = viewSource
     }
@@ -24,40 +22,37 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        addViewModelObserver()
     }
 }
 
 private extension LoginViewController {
 
     var phone: String? {
-        let text = viewSource.phoneTextField.text.ifNil(.empty)
+        let text = viewSource.phoneField.text.ifNil(.empty)
         if text.count < TextInputContent.phone.minLength {
-            viewSource.phoneTextField.invalidate()
+            viewSource.phoneField.invalidate()
             return nil
         }
         return text
     }
 
     var email: String? {
-        let text = viewSource.emailTextField.text.ifNil(.empty)
+        let text = viewSource.emailField.text.ifNil(.empty)
         if !text.isValidEmail {
-            viewSource.emailTextField.invalidate()
+            viewSource.emailField.invalidate()
             return nil
         }
         return text
     }
 
     @objc func buttonPressed() {
-        viewModel.login(with: email, phone: phone)
-    }
-}
 
-private extension LoginViewController {
+        guard let email = email, let phone = phone else { return }
 
-    @objc func addViewModelObserver() {
-        viewModel.handler = {
-            self.coordinator.showValidation()
+        interactor.login(with: email, phone: phone)
+        .done { [weak self] response in
+            self?.interactor.coordinator.showValidation(with: response.authyId!)
         }
+        .cauterize()
     }
 }

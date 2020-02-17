@@ -16,10 +16,10 @@ final class LoginVerificationCoordinator: Coordinator {
         self.navigator = navigator
     }
 
-    func start() {
+    func start(with authId: String) {
         let controller = LoginVerificationViewController()
-        controller.coordinator = self
-
+        controller.interactor = LoginVerificationInteractor(with: authId)
+        controller.interactor.coordinator = self
         navigator.pushViewController(controller)
     }
 

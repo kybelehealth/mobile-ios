@@ -14,13 +14,14 @@ final class LoginCoordinator: Coordinator {
 
     func controller() -> UIViewController {
         let controller = LoginViewController()
-        controller.coordinator = self
+        controller.interactor = LoginInteractor()
+        controller.interactor.coordinator = self
         navigator = UINavigationController(rootViewController: controller)
 
         return navigator
     }
 
-    func showValidation() {
-        LoginVerificationCoordinator(navigator: navigator).start()
+    func showValidation(with authId: String) {
+        LoginVerificationCoordinator(navigator: navigator).start(with: authId)
     }
 }

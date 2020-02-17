@@ -13,9 +13,9 @@ final class LoginVerificationView: UIView {
 
     // MARK: - Declaration
 
-    private lazy var messageLabel = UILabel.make(defaultText: "Please enter the code we’ve sent you via SMS.".localized(), lines: 0)
+    private lazy var messageLabel: UILabel = .make(defaultText: "Please enter the code we’ve sent you via SMS.".localized(), lines: 0)
 
-    lazy var smsTextField: TextInputField = .init(placeholder: "Enter Code".localized(), contentType: .smsCode)
+    lazy var smsField: TextInputField = .init("Enter Code".localized(), type: .smsCode)
 
     lazy var button = UIButton.make(backgroundColor: .kybelePurple,
                                     title: "Continue".localized(),
@@ -30,7 +30,7 @@ final class LoginVerificationView: UIView {
         backgroundColor = .white
 
         let mainStack = UIStackView(arrangedSubviews: [messageLabel,
-                                                       smsTextField])
+                                                       smsField])
         mainStack.spacing = 40
         mainStack.axis = .vertical
 

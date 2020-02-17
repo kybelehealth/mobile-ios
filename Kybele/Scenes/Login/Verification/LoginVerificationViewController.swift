@@ -10,13 +10,10 @@ import UIKit
 
 final class LoginVerificationViewController: UIViewController {
 
-    var coordinator: LoginVerificationCoordinator!
-
-    private var viewModel: LoginVerificationViewModel!
+    var interactor: LoginVerificationInteractor!
     private var viewSource: LoginVerificationView!
 
     override func loadView() {
-        viewModel = LoginVerificationViewModel()
         viewSource = LoginVerificationView()
         view = viewSource
     }
@@ -25,31 +22,27 @@ final class LoginVerificationViewController: UIViewController {
         super.viewDidLoad()
         title = "Enter Code".localized()
         viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-        addViewModelObserver()
     }
 }
 
 private extension LoginVerificationViewController {
 
     var code: String? {
-        let text = viewSource.smsTextField.text.ifNil(.empty)
+        let text = viewSource.smsField.text.ifNil(.empty)
         if text.count < TextInputContent.smsCode.minLength {
-            viewSource.smsTextField.invalidate()
+            viewSource.smsField.invalidate()
             return nil
         }
         return text
     }
 
     @objc func buttonPressed() {
-        viewModel.verify(with: code)
-    }
-}
+        guard let code = code else { return }
 
-private extension LoginVerificationViewController {
-
-    @objc func addViewModelObserver() {
-        viewModel.handler = {
-            self.coordinator.showProfileEditor()
+        interactor.verify(with: code)
+        .done {
+            self.interactor.coordinator.showProfileEditor()
         }
+        .cauterize()
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol View {
-    associatedtype VM: ViewModel
+    associatedtype VM: Interactor
     associatedtype VS: UIView
     var viewSource: VS { get }
     var viewModel: VM { get }

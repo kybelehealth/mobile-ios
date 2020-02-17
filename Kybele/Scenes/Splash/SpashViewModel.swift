@@ -6,7 +6,7 @@
 //  Copyright © 2019 Rufat Mirza. All rights reserved.
 //
 
-final class SplashViewModel: ViewModel {
+final class SplashViewModel: Interactor {
 
     // MARK: - Properties
     override init() {

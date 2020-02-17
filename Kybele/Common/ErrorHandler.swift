@@ -22,7 +22,7 @@ protocol ErrorHandler {
     func handleError(error: Error) -> ErrorObject
 }
 
-extension ErrorHandler where Self: ViewModel {
+extension ErrorHandler where Self: Interactor {
     func handleError(error: Error) -> ErrorObject {
         let networkError = error as? AFError
 

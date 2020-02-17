@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomepageViewModel: ViewModel {
+class HomepageViewModel: Interactor {
 
     let pageTitle: String = "KYBELE"
 

@@ -1,5 +1,5 @@
 //
-//  LoginProfileViewModel.swift
+//  LoginProfileInteractor.swift
 //  Kybele
 //
 //  Created by Rufat Mirza on 15.02.2020.
@@ -8,8 +8,8 @@
 
 import UIKit
 
-final class LoginProfileViewModel: ViewModel {
+final class LoginProfileInteractor: Interactor {
 
-    var handler: () -> Void = {}
+    var coordinator: LoginProfileCoordinator!
 
 }

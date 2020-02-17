@@ -16,6 +16,6 @@ var appStoreId = ""
 
 protocol SplashApi {}
 
-extension SplashApi where Self: ViewModel {
+extension SplashApi where Self: Interactor {
     
 }

@@ -70,15 +70,15 @@ class TextInputField: UIView, UITextFieldDelegate, Invalidable {
 
     // MARK: View Lifecycle
 
-    init(placeholder: String = .empty, contentType: TextInputContent = .none) {
+    init(_ placeholder: String = .empty, type: TextInputContent = .none) {
 
         self.placeholder = placeholder
-        self.contentType = contentType
-        self.hintLabel.text = contentType.hint
+        self.contentType = type
+        self.hintLabel.text = type.hint
 
         super.init(frame: .zero)
 
-        hintLabel.text = contentType.hint
+        hintLabel.text = type.hint
 
         backgroundColor = .white
 

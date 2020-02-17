@@ -7,6 +7,7 @@
 //
 
 import Localize_Swift
+import PromiseKit
 import SwifterSwift
 import UIKit
 
