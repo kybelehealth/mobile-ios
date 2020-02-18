@@ -8,22 +8,21 @@
 
 import KeychainSwift
 
-public final class KeychainService {
+final class KeychainService {
 
-    public enum KeychainKeys: String {
-
+    enum KeychainKeys: String {
         case authyId
     }
 
-    public static let shared = KeychainService()
+    static let shared = KeychainService()
 
-    private let keychain = KeychainSwift()
+    let keychain = KeychainSwift()
 
-    public func get(key: KeychainKeys) -> String? {
+    func get(key: KeychainKeys) -> String? {
         return keychain.get(key.rawValue)
     }
 
-    public func set(value: String, key: KeychainKeys){
+    func set(value: String, key: KeychainKeys){
         keychain.set(value, forKey: key.rawValue)
     }
 }

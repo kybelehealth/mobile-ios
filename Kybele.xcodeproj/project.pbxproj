@@ -23,6 +23,12 @@
 		3D5809E723FAE87C00BE2345 /* LoginTermsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809E323FAE87C00BE2345 /* LoginTermsViewController.swift */; };
 		3D5809E823FAE87C00BE2345 /* LoginTermsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809E423FAE87C00BE2345 /* LoginTermsInteractor.swift */; };
 		3D5809E923FAE87C00BE2345 /* LoginTermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809E523FAE87C00BE2345 /* LoginTermsView.swift */; };
+		3D5809F123FC3F8300BE2345 /* Notification+UserInfoKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809F023FC3F8300BE2345 /* Notification+UserInfoKeys.swift */; };
+		3D5809F323FC3FC300BE2345 /* NotificationCenter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809F223FC3FC300BE2345 /* NotificationCenter+Additions.swift */; };
+		3D5809F623FC411400BE2345 /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809F523FC411400BE2345 /* NotificationNames.swift */; };
+		3D5809F923FC417A00BE2345 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809F823FC417A00BE2345 /* DefaultKeys.swift */; };
+		3D5809FB23FC41F500BE2345 /* Notification+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809FA23FC41F500BE2345 /* Notification+Additions.swift */; };
+		3D5809FD23FC42C300BE2345 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809FC23FC42C300BE2345 /* AuthenticationService.swift */; };
 		3D6FA1AF23DF0365005458A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FA1AE23DF0365005458A6 /* Alamofire */; };
 		3D6FA1B223E01F96005458A6 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FA1B123E01F96005458A6 /* SwifterSwift */; };
 		3D72902723E02A1B00FE094A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D72902623E02A1B00FE094A /* Kingfisher.framework */; };
@@ -46,7 +52,7 @@
 		3DA4F09B23A5035F001A2B97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA4F09923A5035F001A2B97 /* LaunchScreen.storyboard */; };
 		3DA4F0A623A50360001A2B97 /* KybeleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4F0A523A50360001A2B97 /* KybeleTests.swift */; };
 		3DA4F0B123A50360001A2B97 /* KybeleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4F0B023A50360001A2B97 /* KybeleUITests.swift */; };
-		3DA4F0BF23A5073B001A2B97 /* AppInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4F0BE23A5073B001A2B97 /* AppInit.swift */; };
+		3DA4F0BF23A5073B001A2B97 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4F0BE23A5073B001A2B97 /* ApplicationCoordinator.swift */; };
 		3DA4F0C223A5093B001A2B97 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4F0C123A5093B001A2B97 /* HomepageViewController.swift */; };
 		3DA4F0C523A509CC001A2B97 /* UINavigationContrroller+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4F0C423A509CC001A2B97 /* UINavigationContrroller+Styling.swift */; };
 		3DA4F0C723A50B6A001A2B97 /* HomepageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA4F0C623A50B6A001A2B97 /* HomepageViewModel.swift */; };
@@ -126,6 +132,12 @@
 		3D5809E323FAE87C00BE2345 /* LoginTermsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTermsViewController.swift; sourceTree = "<group>"; };
 		3D5809E423FAE87C00BE2345 /* LoginTermsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTermsInteractor.swift; sourceTree = "<group>"; };
 		3D5809E523FAE87C00BE2345 /* LoginTermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTermsView.swift; sourceTree = "<group>"; };
+		3D5809F023FC3F8300BE2345 /* Notification+UserInfoKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notification+UserInfoKeys.swift"; path = "../Common/Notification/Notification+UserInfoKeys.swift"; sourceTree = "<group>"; };
+		3D5809F223FC3FC300BE2345 /* NotificationCenter+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Additions.swift"; sourceTree = "<group>"; };
+		3D5809F523FC411400BE2345 /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
+		3D5809F823FC417A00BE2345 /* DefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
+		3D5809FA23FC41F500BE2345 /* Notification+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Additions.swift"; sourceTree = "<group>"; };
+		3D5809FC23FC42C300BE2345 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		3D72902123E025CB00FE094A /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		3D72902623E02A1B00FE094A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		3D72902923E02CBF00FE094A /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
@@ -154,7 +166,7 @@
 		3DA4F0AC23A50360001A2B97 /* KybeleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KybeleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA4F0B023A50360001A2B97 /* KybeleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KybeleUITests.swift; sourceTree = "<group>"; };
 		3DA4F0B223A50360001A2B97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DA4F0BE23A5073B001A2B97 /* AppInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInit.swift; sourceTree = "<group>"; };
+		3DA4F0BE23A5073B001A2B97 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		3DA4F0C123A5093B001A2B97 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		3DA4F0C423A509CC001A2B97 /* UINavigationContrroller+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationContrroller+Styling.swift"; sourceTree = "<group>"; };
 		3DA4F0C623A50B6A001A2B97 /* HomepageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewModel.swift; sourceTree = "<group>"; };
@@ -274,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				3D4E962223DC846800D45214 /* KeychainService.swift */,
+				3D5809FC23FC42C300BE2345 /* AuthenticationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -287,6 +300,20 @@
 				3D5809E323FAE87C00BE2345 /* LoginTermsViewController.swift */,
 			);
 			path = Terms;
+			sourceTree = "<group>";
+		};
+		3D5809F423FC40DF00BE2345 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		3D5809F723FC416D00BE2345 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserDefaults;
 			sourceTree = "<group>";
 		};
 		3D7635EB23F59339006FA3F7 /* Base */ = {
@@ -354,7 +381,7 @@
 			children = (
 				3DA4F08E23A5035D001A2B97 /* AppDelegate.swift */,
 				3DA4F09023A5035D001A2B97 /* SceneDelegate.swift */,
-				3DA4F0BE23A5073B001A2B97 /* AppInit.swift */,
+				3DA4F0BE23A5073B001A2B97 /* ApplicationCoordinator.swift */,
 				3DA4F09723A5035F001A2B97 /* Assets.xcassets */,
 				3D4E961623DC5B5600D45214 /* Colors.xcassets */,
 				3DA4F09C23A5035F001A2B97 /* Info.plist */,
@@ -410,6 +437,8 @@
 			children = (
 				3D72903123E046D100FE094A /* Any+Additions.swift */,
 				3D7635F523F696EC006FA3F7 /* CGSize+Additions.swift */,
+				3D5809FA23FC41F500BE2345 /* Notification+Additions.swift */,
+				3D5809F223FC3FC300BE2345 /* NotificationCenter+Additions.swift */,
 				3D7635F923F6C719006FA3F7 /* String+Additions.swift */,
 				3D7635F723F6974F006FA3F7 /* UIBarButtonItem+Additions.swift */,
 				3DA4F0E923A53861001A2B97 /* UIButton+Maker.swift */,
@@ -417,10 +446,10 @@
 				3DA4F0E523A52BE1001A2B97 /* UIImage+Maker.swift */,
 				3DA4F0E023A521C7001A2B97 /* UILabel+Maker.swift */,
 				3DA4F0C423A509CC001A2B97 /* UINavigationContrroller+Styling.swift */,
+				3D742A3B23FB2975005AE0F7 /* UIScrollView+Additions.swift */,
 				3DA4F0EB23A5397F001A2B97 /* UIStackView+Maker.swift */,
 				3D4E961A23DC600700D45214 /* UIView+Additions.swift */,
 				3DA4F0D623A51015001A2B97 /* UIView+Loading.swift */,
-				3D742A3B23FB2975005AE0F7 /* UIScrollView+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -428,8 +457,10 @@
 		3DA4F0CA23A50BB8001A2B97 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				3D7635F223F6920E006FA3F7 /* UI */,
+				3D5809F723FC416D00BE2345 /* UserDefaults */,
+				3D5809F423FC40DF00BE2345 /* Notification */,
 				3DA4F0CD23A50C35001A2B97 /* ErrorHandler.swift */,
+				3D7635F223F6920E006FA3F7 /* UI */,
 				3DA4F0D423A50FDD001A2B97 /* View.swift */,
 				3DA4F0F423A53C6F001A2B97 /* WebViewController.swift */,
 			);
@@ -464,6 +495,9 @@
 			children = (
 				3DA4F0E323A5281C001A2B97 /* Size.swift */,
 				3D4E961C23DC6CB800D45214 /* Type.swift */,
+				3D5809F823FC417A00BE2345 /* DefaultKeys.swift */,
+				3D5809F523FC411400BE2345 /* NotificationNames.swift */,
+				3D5809F023FC3F8300BE2345 /* Notification+UserInfoKeys.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -852,6 +886,7 @@
 				3D7635EF23F5936A006FA3F7 /* LoginCoordinator.swift in Sources */,
 				3D4E961B23DC600700D45214 /* UIView+Additions.swift in Sources */,
 				3DB3B65923A555FF0024F373 /* InformationBlogView.swift in Sources */,
+				3D5809F623FC411400BE2345 /* NotificationNames.swift in Sources */,
 				95D9531C23A564E6005BA7B4 /* LoginResponse.swift in Sources */,
 				3D4E961123DC504500D45214 /* LoginViewController.swift in Sources */,
 				3DA4F0CC23A50BD3001A2B97 /* Interactor.swift in Sources */,
@@ -863,11 +898,14 @@
 				3D742A3C23FB2975005AE0F7 /* UIScrollView+Additions.swift in Sources */,
 				3DBEC1DC23F7E602005BDAA5 /* LoginProfileInteractor.swift in Sources */,
 				3D4E961523DC505E00D45214 /* LoginView.swift in Sources */,
+				3D5809F123FC3F8300BE2345 /* Notification+UserInfoKeys.swift in Sources */,
 				3DF9C4B323EEBD9B00074729 /* LoginVerificationViewController.swift in Sources */,
-				3DA4F0BF23A5073B001A2B97 /* AppInit.swift in Sources */,
+				3D5809F323FC3FC300BE2345 /* NotificationCenter+Additions.swift in Sources */,
+				3DA4F0BF23A5073B001A2B97 /* ApplicationCoordinator.swift in Sources */,
 				3DA4F0D223A50F9B001A2B97 /* SplashViewControllre.swift in Sources */,
 				95D9531623A56110005BA7B4 /* LoginTwoFactorResponse.swift in Sources */,
 				3DF9C4B523EEBDF100074729 /* LoginVerificationView.swift in Sources */,
+				3D5809FD23FC42C300BE2345 /* AuthenticationService.swift in Sources */,
 				3D76360323F73FED006FA3F7 /* HomepageCoordinator.swift in Sources */,
 				3DA4F0E423A5281C001A2B97 /* Size.swift in Sources */,
 				3DA4F0FB23A54CA7001A2B97 /* HealthProfileViewModel.swift in Sources */,
@@ -884,6 +922,7 @@
 				3DA4F09123A5035D001A2B97 /* SceneDelegate.swift in Sources */,
 				3D4E961323DC505300D45214 /* LoginInteractor.swift in Sources */,
 				3D4E962323DC846800D45214 /* KeychainService.swift in Sources */,
+				3D5809F923FC417A00BE2345 /* DefaultKeys.swift in Sources */,
 				3D5809E623FAE87C00BE2345 /* LoginTermsCoordinator.swift in Sources */,
 				3DA4F0FD23A54EC2001A2B97 /* HealthRecordsViewController.swift in Sources */,
 				3DB3B65B23A556120024F373 /* InformationBlogViewModel.swift in Sources */,
@@ -891,6 +930,7 @@
 				3DA4F0E123A521C7001A2B97 /* UILabel+Maker.swift in Sources */,
 				3DA4F0DB23A51127001A2B97 /* SpashViewModel.swift in Sources */,
 				3D72903223E046D100FE094A /* Any+Additions.swift in Sources */,
+				3D5809FB23FC41F500BE2345 /* Notification+Additions.swift in Sources */,
 				3D5809E723FAE87C00BE2345 /* LoginTermsViewController.swift in Sources */,
 				3DA4F0D523A50FDD001A2B97 /* View.swift in Sources */,
 				3D7635F623F696EC006FA3F7 /* CGSize+Additions.swift in Sources */,

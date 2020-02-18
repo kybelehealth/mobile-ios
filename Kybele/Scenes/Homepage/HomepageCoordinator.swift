@@ -10,13 +10,16 @@ import UIKit
 
 final class HomepageCoordinator: Coordinator {
 
-    var navigator: UINavigationController!
+    private weak var navigator: UINavigationController!
 
     func controller() -> UIViewController {
         let controller = HomepageViewController()
         controller.coordinator = self
 
-        navigator = UINavigationController(rootViewController: controller)
+        let navigator = UINavigationController(rootViewController: controller)
+        defer { self.navigator = navigator }
+
+        navigator.modalPresentationStyle = .fullScreen
         navigator.setupStyling()
         return navigator
     }

@@ -14,6 +14,8 @@ final class LoginViewController: UIViewController {
 
     private var viewSource: LoginView!
 
+    private let authenticator: AuthenticationService = .shared
+
     override func loadView() {
         viewSource = LoginView()
         view = viewSource
@@ -23,12 +25,20 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
+
+    deinit {
+        print("#function")
+    }
 }
 
 private extension LoginViewController {
 
     @objc func buttonPressed() {
-        
+
+        interactor.coordinator.close()
+
+        authenticator.authenticate()
+
         let phoneText = viewSource.phoneField.validText()
         let emailText = viewSource.emailField.validText()
 

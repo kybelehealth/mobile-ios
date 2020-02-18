@@ -10,3 +10,4 @@ import UIKit
 
 typealias VoidCallback = () -> Void
 typealias ImageCallback = (UIImage?) -> Void
+typealias Callback<T> = (_: T) -> Void

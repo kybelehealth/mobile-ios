@@ -10,13 +10,17 @@ import UIKit
 
 final class LoginCoordinator: Coordinator {
 
-    var navigator: UINavigationController!
+    private weak var navigator: UINavigationController!
 
     func controller() -> UIViewController {
         let controller = LoginViewController()
         controller.interactor = LoginInteractor()
         controller.interactor.coordinator = self
-        navigator = UINavigationController(rootViewController: controller)
+
+        let navigator = UINavigationController(rootViewController: controller)
+        defer { self.navigator = navigator }
+        navigator.modalPresentationStyle = .fullScreen
+        
         navigator.setupStyling()
         return navigator
     }
@@ -24,5 +28,9 @@ final class LoginCoordinator: Coordinator {
     func showValidation(with authId: String) {
 //        LoginVerificationCoordinator(navigator: navigator).start(with: authId)
         LoginTermsCoordinator(navigator: navigator).start()
+    }
+
+    func close() {
+        navigator.dismiss(animated: true)
     }
 }

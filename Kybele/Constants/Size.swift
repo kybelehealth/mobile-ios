@@ -9,7 +9,6 @@
 import UIKit
 
 struct Sizes {
-
     static let appSideMargin: CGFloat = 16
     static let homepageInteritemSpace: CGFloat = 8
 }
