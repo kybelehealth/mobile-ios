@@ -17,6 +17,7 @@ class HomepageCell: UICollectionViewCell {
     private let iconImageView = UIImageView.make()
 
     // MARK: - Initialization
+    
     override init(frame: CGRect) {
 
         super.init(frame: frame)
@@ -47,9 +48,10 @@ class HomepageCell: UICollectionViewCell {
 }
 
 // MARK: - Populate HomepageCell
+
 extension HomepageCell {
 
-    func populate(with item: HomepageNavigationItem) {
+    func populate(with item: HomepageInteractor.Item) {
         iconImageView.image = item.iconImage
         nameLabel.text = item.name
     }

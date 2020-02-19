@@ -20,24 +20,9 @@ public final class Service {
         let request = try! endpoint.asURLRequest()
         return AF.request(request).validate().responseModel()
     }
-
-//    func request<T: Codable>(endpoint: APIConfig, callback: @escaping (Result<T>) -> Void ) {
-//        let request = try! endpoint.asURLRequest()
-//        AF.request(request).validate().responseModel(completion: callback)
-//    }
 }
 
 public extension DataRequest {
-
-//    func responseModel<T: Codable>(completion: @escaping (Result<T>) -> Void) {
-//        responseData { response in
-//            if let data = response.data, let model = try? JSONDecoder().decode(T.self, from: data) {
-//                completion(.success(model))
-//            } else {
-//                completion(.failure(.responseValidationFailed(reason: .dataFileNil)))
-//            }
-//        }
-//    }
 
     func responseModel<T: Codable>() -> Promise<T> {
 

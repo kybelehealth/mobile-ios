@@ -29,7 +29,7 @@ final class LoginTermsViewController: UIViewController {
 
 private extension LoginTermsViewController {
 
-    @objc func prepareContent() {
+    func prepareContent() {
         interactor.start().done { [weak self] display in
             self?.viewSource.body.attributedText = display
         }.ensure { [weak self] in

@@ -19,14 +19,3 @@ public extension Optional where Wrapped: Any {
     }
   }
 }
-
-//protocol OptionalString {}
-//
-//extension String: OptionalString {}
-//
-//extension Optional where Wrapped: OptionalString {
-//
-//    var isNilOrEmpty: Bool {
-//        return ((self as? String) ?? .empty).isEmpty
-//    }
-//}

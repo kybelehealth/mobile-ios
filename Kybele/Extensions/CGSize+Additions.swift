@@ -9,11 +9,11 @@
 import UIKit
 
 extension CGSize {
-
+    
     var toRect: CGRect {
         return CGRect(origin: .zero, size: self)
     }
-
+    
     init(size: CGFloat) {
         self.init(width: size, height: size)
     }

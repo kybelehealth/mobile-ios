@@ -14,7 +14,8 @@ final class HomepageCoordinator: Coordinator {
 
     func controller() -> UIViewController {
         let controller = HomepageViewController()
-        controller.coordinator = self
+        controller.interactor = HomepageInteractor()
+        controller.interactor.coordinator = self
 
         let navigator = UINavigationController(rootViewController: controller)
         defer { self.navigator = navigator }
@@ -22,5 +23,12 @@ final class HomepageCoordinator: Coordinator {
         navigator.modalPresentationStyle = .fullScreen
         navigator.setupStyling()
         return navigator
+    }
+}
+
+extension HomepageCoordinator {
+    
+    func show(destination: UIViewController) {
+        navigator.pushViewController(destination)
     }
 }

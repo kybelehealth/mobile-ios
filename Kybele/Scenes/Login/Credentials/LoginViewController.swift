@@ -35,9 +35,7 @@ private extension LoginViewController {
 
     @objc func buttonPressed() {
 
-        interactor.coordinator.close()
-
-        authenticator.authenticate()
+//        authenticator.authenticate()
 
         let phoneText = viewSource.phoneField.validText()
         let emailText = viewSource.emailField.validText()

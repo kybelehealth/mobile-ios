@@ -26,8 +26,7 @@ final class LoginCoordinator: Coordinator {
     }
 
     func showValidation(with authId: String) {
-//        LoginVerificationCoordinator(navigator: navigator).start(with: authId)
-        LoginTermsCoordinator(navigator: navigator).start()
+        LoginVerificationCoordinator(navigator: navigator).start(with: authId)
     }
 
     func close() {

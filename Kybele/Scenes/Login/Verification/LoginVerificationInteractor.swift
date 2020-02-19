@@ -13,7 +13,7 @@ final class LoginVerificationInteractor: Interactor {
 
     var coordinator: LoginVerificationCoordinator!
 
-    let storage: Storage
+    private let storage: Storage
 
     init(with authId: String) {
         storage = Storage(authyId: authId)
@@ -30,7 +30,7 @@ final class LoginVerificationInteractor: Interactor {
     }
 }
 
-extension LoginVerificationInteractor {
+private extension LoginVerificationInteractor {
 
   struct Storage {
       let authyId: String

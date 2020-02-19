@@ -8,9 +8,9 @@
 
 import UIKit
 
-var coordinator: ApplicationCoordinator?
-
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+
+    var coordinator: ApplicationCoordinator?
 
     var window: UIWindow?
 

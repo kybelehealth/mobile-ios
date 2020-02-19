@@ -42,7 +42,11 @@ class HomepageView: UIView {
 
     init() {
         super.init(frame: .zero)
-        addSubviews([collectionView])
+
+        backgroundColor = .white
+
+        addSubview(collectionView)
+        
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
