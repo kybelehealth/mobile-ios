@@ -24,6 +24,7 @@ final class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        viewSource.skipButton.addTarget(self, action: #selector(skipButtonPressed), for: .touchUpInside)
     }
 
     deinit {
@@ -34,8 +35,6 @@ final class LoginViewController: UIViewController {
 private extension LoginViewController {
 
     @objc func buttonPressed() {
-
-//        authenticator.authenticate()
 
         let phoneText = viewSource.phoneField.validText()
         let emailText = viewSource.emailField.validText()
@@ -49,5 +48,9 @@ private extension LoginViewController {
             self?.interactor.coordinator.showValidation(with: "123456")
         }
         .cauterize()
+    }
+
+    @objc func skipButtonPressed() {
+        interactor.coordinator.showValidation(with: "123456")
     }
 }

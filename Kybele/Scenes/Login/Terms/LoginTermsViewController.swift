@@ -24,6 +24,7 @@ final class LoginTermsViewController: UIViewController {
         view.startLoadingIndicatorView()
         navigationItem.title = "Personal Data"
         prepareContent()
+        viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
     }
 }
 
@@ -36,5 +37,13 @@ private extension LoginTermsViewController {
             self?.view.stopLoadingIndicatorView()
         }
         .cauterize()
+    }
+}
+
+private extension LoginTermsViewController {
+
+    @objc func buttonPressed() {
+        interactor.coordinator.close()
+        AuthenticationService.shared.authenticate()
     }
 }

@@ -1,3 +1,4 @@
-github "airbnb/lottie-ios" "8f81de8d81da8631fd95ff81a9db133b76e13ea4"
+github "SnapKit/SnapKit" "4.2.0"
+github "airbnb/lottie-ios" "934954c378fbd49f3798931cd314740ff3176972"
 github "marmelroy/Localize-Swift" "3.1.0"
-github "onevcat/Kingfisher" "5.13.1"
+github "onevcat/Kingfisher" "5.13.2"

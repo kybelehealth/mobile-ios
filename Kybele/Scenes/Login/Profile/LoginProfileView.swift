@@ -16,7 +16,7 @@ final class LoginProfileView: UIView {
     
     lazy var surnameField: TextInputField = .init(type: .surname)
     
-    lazy var dateOfBirthField: TextInputField = .init(type: .smsCode)
+    lazy var dateOfBirthField: TextInputField = .init(type: .smsCode) // TODO: Replace with date picker
     
     lazy var addressField: TextInputField = .init(type: .address)
 
@@ -25,6 +25,22 @@ final class LoginProfileView: UIView {
                                     titleColor: .white,
                                     font: UIFont.boldSystemFont(ofSize: 20),
                                     cornerRadius: 24)
+
+    // TODO: Delete this in production
+    lazy var skipButton: UIButton = {
+        let view = UIButton(type: .system)
+        view.setTitle("Skip (For Debug)", for: .normal)
+        return view
+    }()
+
+    // TODO: Delete this in production
+    private func addSkipButton() {
+        addSubview(skipButton)
+        skipButton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(button.snp.top).offset(-16)
+        }
+    }
 
     // MARK: - Setup
 
@@ -52,6 +68,8 @@ final class LoginProfileView: UIView {
             $0.height.equalTo(48)
         }
         button.enableShadow()
+
+        addSkipButton()
     }
 
     required init?(coder aDecoder: NSCoder) {

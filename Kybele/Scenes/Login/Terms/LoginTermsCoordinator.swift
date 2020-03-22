@@ -23,4 +23,8 @@ final class LoginTermsCoordinator: Coordinator {
 
         navigator.pushViewController(controller)
     }
+
+    func close() {
+        navigator.dismiss(animated: true)
+    }
 }

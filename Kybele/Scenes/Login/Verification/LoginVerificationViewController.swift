@@ -22,6 +22,7 @@ final class LoginVerificationViewController: UIViewController {
         super.viewDidLoad()
         title = "Enter Code".localized()
         viewSource.button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        viewSource.skipButton.addTarget(self, action: #selector(skipButtonPressed), for: .touchUpInside)
     }
 }
 
@@ -38,5 +39,9 @@ private extension LoginVerificationViewController {
             self.interactor.coordinator.showProfileEditor()
         }
         .cauterize()
+    }
+
+    @objc func skipButtonPressed() {
+        interactor.coordinator.showProfileEditor()
     }
 }

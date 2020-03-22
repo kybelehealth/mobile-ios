@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11AF8BEF60E626397B61C89A /* Pods_Kybele_KybeleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56FA39E8CE8C8EAC3B464CCE /* Pods_Kybele_KybeleUITests.framework */; };
 		3D4E960923DC394B00D45214 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E960823DC394B00D45214 /* Endpoint.swift */; };
 		3D4E960E23DC3E9900D45214 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E960D23DC3E9900D45214 /* Service.swift */; };
 		3D4E961123DC504500D45214 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4E961023DC504500D45214 /* LoginViewController.swift */; };
@@ -96,8 +95,6 @@
 		95D9531823A5616F005BA7B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531723A5616F005BA7B4 /* User.swift */; };
 		95D9531A23A56220005BA7B4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531923A56220005BA7B4 /* Language.swift */; };
 		95D9531C23A564E6005BA7B4 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531B23A564E6005BA7B4 /* LoginResponse.swift */; };
-		9F34D623EA871ECE83812CAD /* Pods_KybeleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B4CB829166DC18391AD4E85 /* Pods_KybeleTests.framework */; };
-		BCAF24AC6F0AE86F439C38CA /* Pods_Kybele.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4F750E1E12F24926E71889 /* Pods_Kybele.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,7 +115,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		37FBEFC97146565798E602E3 /* Pods-Kybele.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kybele.debug.xcconfig"; path = "Target Support Files/Pods-Kybele/Pods-Kybele.debug.xcconfig"; sourceTree = "<group>"; };
 		3D4E960823DC394B00D45214 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		3D4E960D23DC3E9900D45214 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		3D4E961023DC504500D45214 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -206,18 +202,10 @@
 		3DF9C4B223EEBD9B00074729 /* LoginVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificationViewController.swift; sourceTree = "<group>"; };
 		3DF9C4B423EEBDF100074729 /* LoginVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificationView.swift; sourceTree = "<group>"; };
 		3DF9C4B623EEBE3D00074729 /* LoginVerificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificationInteractor.swift; sourceTree = "<group>"; };
-		49210B38D9E4B3F222895724 /* Pods-KybeleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KybeleTests.debug.xcconfig"; path = "Target Support Files/Pods-KybeleTests/Pods-KybeleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4B4F750E1E12F24926E71889 /* Pods_Kybele.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kybele.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C3F4260DAB3D7111A15BA09 /* Pods-Kybele.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kybele.release.xcconfig"; path = "Target Support Files/Pods-Kybele/Pods-Kybele.release.xcconfig"; sourceTree = "<group>"; };
-		56FA39E8CE8C8EAC3B464CCE /* Pods_Kybele_KybeleUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kybele_KybeleUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B4CB829166DC18391AD4E85 /* Pods_KybeleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KybeleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D9531523A56110005BA7B4 /* LoginTwoFactorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTwoFactorResponse.swift; sourceTree = "<group>"; };
 		95D9531723A5616F005BA7B4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		95D9531923A56220005BA7B4 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		95D9531B23A564E6005BA7B4 /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		AA816A3B9E6B94ECDB689980 /* Pods-Kybele-KybeleUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kybele-KybeleUITests.debug.xcconfig"; path = "Target Support Files/Pods-Kybele-KybeleUITests/Pods-Kybele-KybeleUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B64944C43BE8B79A829B9C50 /* Pods-KybeleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KybeleTests.release.xcconfig"; path = "Target Support Files/Pods-KybeleTests/Pods-KybeleTests.release.xcconfig"; sourceTree = "<group>"; };
-		C4F9C1B28828E7BC69478564 /* Pods-Kybele-KybeleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kybele-KybeleUITests.release.xcconfig"; path = "Target Support Files/Pods-Kybele-KybeleUITests/Pods-Kybele-KybeleUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +220,6 @@
 				3D6FA1B223E01F96005458A6 /* SwifterSwift in Frameworks */,
 				3D4E962023DC77C200D45214 /* KeychainSwift in Frameworks */,
 				3D72902A23E02CBF00FE094A /* Lottie.framework in Frameworks */,
-				BCAF24AC6F0AE86F439C38CA /* Pods_Kybele.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +227,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F34D623EA871ECE83812CAD /* Pods_KybeleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +234,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11AF8BEF60E626397B61C89A /* Pods_Kybele_KybeleUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +349,6 @@
 				3DA4F0AF23A50360001A2B97 /* KybeleUITests */,
 				3DA4F08C23A5035D001A2B97 /* Products */,
 				D8C480923C1E182DA2BC42FC /* Frameworks */,
-				F6F06370330B24C4134A10C1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -589,24 +573,8 @@
 				3D72902923E02CBF00FE094A /* Lottie.framework */,
 				3D72902623E02A1B00FE094A /* Kingfisher.framework */,
 				3D72902123E025CB00FE094A /* SnapKit.framework */,
-				4B4F750E1E12F24926E71889 /* Pods_Kybele.framework */,
-				56FA39E8CE8C8EAC3B464CCE /* Pods_Kybele_KybeleUITests.framework */,
-				7B4CB829166DC18391AD4E85 /* Pods_KybeleTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F6F06370330B24C4134A10C1 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				37FBEFC97146565798E602E3 /* Pods-Kybele.debug.xcconfig */,
-				4C3F4260DAB3D7111A15BA09 /* Pods-Kybele.release.xcconfig */,
-				AA816A3B9E6B94ECDB689980 /* Pods-Kybele-KybeleUITests.debug.xcconfig */,
-				C4F9C1B28828E7BC69478564 /* Pods-Kybele-KybeleUITests.release.xcconfig */,
-				49210B38D9E4B3F222895724 /* Pods-KybeleTests.debug.xcconfig */,
-				B64944C43BE8B79A829B9C50 /* Pods-KybeleTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,12 +584,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DA4F0B523A50360001A2B97 /* Build configuration list for PBXNativeTarget "Kybele" */;
 			buildPhases = (
-				0E868E5145E53B7B5D5CB6E6 /* [CP] Check Pods Manifest.lock */,
 				3DA4F08723A5035D001A2B97 /* Sources */,
 				3DA4F08823A5035D001A2B97 /* Frameworks */,
 				3DA4F08923A5035D001A2B97 /* Resources */,
 				3D72902523E025E200FE094A /* ShellScript */,
-				6644365EAAD4E90E57188BC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -642,7 +608,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DA4F0B823A50360001A2B97 /* Build configuration list for PBXNativeTarget "KybeleTests" */;
 			buildPhases = (
-				06C5C8849B3DF53CD4A446CC /* [CP] Check Pods Manifest.lock */,
 				3DA4F09D23A50360001A2B97 /* Sources */,
 				3DA4F09E23A50360001A2B97 /* Frameworks */,
 				3DA4F09F23A50360001A2B97 /* Resources */,
@@ -661,11 +626,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DA4F0BB23A50360001A2B97 /* Build configuration list for PBXNativeTarget "KybeleUITests" */;
 			buildPhases = (
-				FAD9CFB8432BD50360B55FAB /* [CP] Check Pods Manifest.lock */,
 				3DA4F0A823A50360001A2B97 /* Sources */,
 				3DA4F0A923A50360001A2B97 /* Frameworks */,
 				3DA4F0AA23A50360001A2B97 /* Resources */,
-				7384435B96BDAF03BACAEA2F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -754,50 +717,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		06C5C8849B3DF53CD4A446CC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KybeleTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0E868E5145E53B7B5D5CB6E6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kybele-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3D72902523E025E200FE094A /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -809,6 +728,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Localize_Swift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -816,66 +736,11 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Localize_Swift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
-		6644365EAAD4E90E57188BC6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kybele/Pods-Kybele-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kybele/Pods-Kybele-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kybele/Pods-Kybele-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7384435B96BDAF03BACAEA2F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kybele-KybeleUITests/Pods-Kybele-KybeleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Kybele-KybeleUITests/Pods-Kybele-KybeleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kybele-KybeleUITests/Pods-Kybele-KybeleUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FAD9CFB8432BD50360B55FAB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Kybele-KybeleUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1122,7 +987,6 @@
 		};
 		3DA4F0B623A50360001A2B97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37FBEFC97146565798E602E3 /* Pods-Kybele.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1146,7 +1010,6 @@
 		};
 		3DA4F0B723A50360001A2B97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C3F4260DAB3D7111A15BA09 /* Pods-Kybele.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1170,7 +1033,6 @@
 		};
 		3DA4F0B923A50360001A2B97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49210B38D9E4B3F222895724 /* Pods-KybeleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1192,7 +1054,6 @@
 		};
 		3DA4F0BA23A50360001A2B97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B64944C43BE8B79A829B9C50 /* Pods-KybeleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1214,7 +1075,6 @@
 		};
 		3DA4F0BC23A50360001A2B97 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA816A3B9E6B94ECDB689980 /* Pods-Kybele-KybeleUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1234,7 +1094,6 @@
 		};
 		3DA4F0BD23A50360001A2B97 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4F9C1B28828E7BC69478564 /* Pods-Kybele-KybeleUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

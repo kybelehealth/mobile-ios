@@ -24,6 +24,22 @@ final class LoginView: UIView {
                                       font: UIFont.boldSystemFont(ofSize: 20),
                                       cornerRadius: 24)
 
+    // TODO: Delete this in production
+    lazy var skipButton: UIButton = {
+        let view = UIButton(type: .system)
+        view.setTitle("Skip (For Debug)", for: .normal)
+        return view
+    }()
+
+    // TODO: Delete this in production
+    private func addSkipButton() {
+        addSubview(skipButton)
+        skipButton.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.bottom.equalTo(button.snp.top).offset(-16)
+        }
+    }
+
     // MARK: - Setup
 
     init() {
@@ -49,6 +65,8 @@ final class LoginView: UIView {
             $0.height.equalTo(48)
         }
         button.enableShadow()
+
+        addSkipButton()
     }
 
     required init?(coder aDecoder: NSCoder) {

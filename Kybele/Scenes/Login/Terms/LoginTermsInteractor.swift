@@ -18,7 +18,7 @@ final class LoginTermsInteractor: Interactor {
     }
     
     var legal_personal: NSAttributedString {
-        let attributedString = NSMutableAttributedString(string: "Protection of Personal Data (KVKK)",
+        let attributedString = NSMutableAttributedString(string: "Protection of Personal Data (KVKK)\n",
                                                          attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .semibold)])
         
         attributedString.append(NSAttributedString(string: "Lorem ipsum dolor sit amet, dolor sit consectetur adipiscing elit. Lorem ipsum dolor sit amet, dolor sit consectetur adipiscing elit. Lorem ipsum dolor sit amet, dolor sit consectetur adipiscing elit. Lorem ipsum dolor sit amet, dolor sit consectetur adipiscing elit. Lorem ipsum dolor sit amet"))
