@@ -28,10 +28,7 @@
 		3D5809F923FC417A00BE2345 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809F823FC417A00BE2345 /* DefaultKeys.swift */; };
 		3D5809FB23FC41F500BE2345 /* Notification+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809FA23FC41F500BE2345 /* Notification+Additions.swift */; };
 		3D5809FD23FC42C300BE2345 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5809FC23FC42C300BE2345 /* AuthenticationService.swift */; };
-		3D6FA1AF23DF0365005458A6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FA1AE23DF0365005458A6 /* Alamofire */; };
 		3D6FA1B223E01F96005458A6 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D6FA1B123E01F96005458A6 /* SwifterSwift */; };
-		3D72902723E02A1B00FE094A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D72902623E02A1B00FE094A /* Kingfisher.framework */; };
-		3D72902A23E02CBF00FE094A /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D72902923E02CBF00FE094A /* Lottie.framework */; };
 		3D72903223E046D100FE094A /* Any+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D72903123E046D100FE094A /* Any+Additions.swift */; };
 		3D742A3C23FB2975005AE0F7 /* UIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D742A3B23FB2975005AE0F7 /* UIScrollView+Additions.swift */; };
 		3D742A3E23FDB1BC005AE0F7 /* PromiseKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D742A3D23FDB1BC005AE0F7 /* PromiseKit.swift */; };
@@ -86,11 +83,15 @@
 		3DBEC1DA23F7E602005BDAA5 /* LoginProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC1D623F7E602005BDAA5 /* LoginProfileViewController.swift */; };
 		3DBEC1DB23F7E602005BDAA5 /* LoginProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC1D723F7E602005BDAA5 /* LoginProfileView.swift */; };
 		3DBEC1DC23F7E602005BDAA5 /* LoginProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBEC1D823F7E602005BDAA5 /* LoginProfileInteractor.swift */; };
-		3DBEC1DE23F7FA09005BDAA5 /* Localize_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DBEC1DD23F7FA09005BDAA5 /* Localize_Swift.framework */; };
 		3DBEC1E123F91315005BDAA5 /* PromiseKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBEC1E023F91315005BDAA5 /* PromiseKit */; };
 		3DF9C4B323EEBD9B00074729 /* LoginVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9C4B223EEBD9B00074729 /* LoginVerificationViewController.swift */; };
 		3DF9C4B523EEBDF100074729 /* LoginVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9C4B423EEBDF100074729 /* LoginVerificationView.swift */; };
 		3DF9C4B723EEBE3D00074729 /* LoginVerificationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF9C4B623EEBE3D00074729 /* LoginVerificationInteractor.swift */; };
+		9535716524683FE600E9B753 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9535716424683FE600E9B753 /* SnapKit */; };
+		953571682468401100E9B753 /* Localize_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 953571672468401100E9B753 /* Localize_Swift */; };
+		9535716D2468407A00E9B753 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9535716C2468407A00E9B753 /* Kingfisher */; };
+		95357170246840E800E9B753 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 9535716F246840E800E9B753 /* Lottie */; };
+		953571732468412500E9B753 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 953571722468412500E9B753 /* Alamofire */; };
 		95D9531623A56110005BA7B4 /* LoginTwoFactorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531523A56110005BA7B4 /* LoginTwoFactorResponse.swift */; };
 		95D9531823A5616F005BA7B4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531723A5616F005BA7B4 /* User.swift */; };
 		95D9531A23A56220005BA7B4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D9531923A56220005BA7B4 /* Language.swift */; };
@@ -213,13 +214,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D72902723E02A1B00FE094A /* Kingfisher.framework in Frameworks */,
+				9535716524683FE600E9B753 /* SnapKit in Frameworks */,
+				953571732468412500E9B753 /* Alamofire in Frameworks */,
 				3DBEC1E123F91315005BDAA5 /* PromiseKit in Frameworks */,
-				3DBEC1DE23F7FA09005BDAA5 /* Localize_Swift.framework in Frameworks */,
-				3D6FA1AF23DF0365005458A6 /* Alamofire in Frameworks */,
+				953571682468401100E9B753 /* Localize_Swift in Frameworks */,
+				9535716D2468407A00E9B753 /* Kingfisher in Frameworks */,
 				3D6FA1B223E01F96005458A6 /* SwifterSwift in Frameworks */,
 				3D4E962023DC77C200D45214 /* KeychainSwift in Frameworks */,
-				3D72902A23E02CBF00FE094A /* Lottie.framework in Frameworks */,
+				95357170246840E800E9B753 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +589,6 @@
 				3DA4F08723A5035D001A2B97 /* Sources */,
 				3DA4F08823A5035D001A2B97 /* Frameworks */,
 				3DA4F08923A5035D001A2B97 /* Resources */,
-				3D72902523E025E200FE094A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -596,9 +597,13 @@
 			name = Kybele;
 			packageProductDependencies = (
 				3D4E961F23DC77C200D45214 /* KeychainSwift */,
-				3D6FA1AE23DF0365005458A6 /* Alamofire */,
 				3D6FA1B123E01F96005458A6 /* SwifterSwift */,
 				3DBEC1E023F91315005BDAA5 /* PromiseKit */,
+				9535716424683FE600E9B753 /* SnapKit */,
+				953571672468401100E9B753 /* Localize_Swift */,
+				9535716C2468407A00E9B753 /* Kingfisher */,
+				9535716F246840E800E9B753 /* Lottie */,
+				953571722468412500E9B753 /* Alamofire */,
 			);
 			productName = Kybele;
 			productReference = 3DA4F08B23A5035D001A2B97 /* Kybele.app */;
@@ -674,9 +679,13 @@
 			mainGroup = 3DA4F08223A5035D001A2B97;
 			packageReferences = (
 				3D4E961E23DC77C100D45214 /* XCRemoteSwiftPackageReference "keychain-swift" */,
-				3D6FA1AD23DF0365005458A6 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3D6FA1B023E01F96005458A6 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
 				3DBEC1DF23F91315005BDAA5 /* XCRemoteSwiftPackageReference "PromiseKit" */,
+				9535716324683FE600E9B753 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				953571662468401100E9B753 /* XCRemoteSwiftPackageReference "Localize-Swift" */,
+				953571692468405300E9B753 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				9535716E246840E800E9B753 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				953571712468412500E9B753 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 3DA4F08C23A5035D001A2B97 /* Products */;
 			projectDirPath = "";
@@ -715,34 +724,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3D72902523E025E200FE094A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Localize_Swift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Lottie.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Localize_Swift.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DA4F08723A5035D001A2B97 /* Sources */ = {
@@ -1161,14 +1142,6 @@
 				minimumVersion = 19.0.0;
 			};
 		};
-		3D6FA1AD23DF0365005458A6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = exactVersion;
-				version = "5.0.0-rc.3";
-			};
-		};
 		3D6FA1B023E01F96005458A6 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift.git";
@@ -1185,6 +1158,46 @@
 				minimumVersion = 6.13.1;
 			};
 		};
+		9535716324683FE600E9B753 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		953571662468401100E9B753 /* XCRemoteSwiftPackageReference "Localize-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Localize-Swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+		953571692468405300E9B753 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
+		9535716E246840E800E9B753 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+		953571712468412500E9B753 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1192,11 +1205,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3D4E961E23DC77C100D45214 /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
-		};
-		3D6FA1AE23DF0365005458A6 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3D6FA1AD23DF0365005458A6 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 		3D6FA1B123E01F96005458A6 /* SwifterSwift */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1207,6 +1215,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DBEC1DF23F91315005BDAA5 /* XCRemoteSwiftPackageReference "PromiseKit" */;
 			productName = PromiseKit;
+		};
+		9535716424683FE600E9B753 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9535716324683FE600E9B753 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		953571672468401100E9B753 /* Localize_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 953571662468401100E9B753 /* XCRemoteSwiftPackageReference "Localize-Swift" */;
+			productName = Localize_Swift;
+		};
+		9535716C2468407A00E9B753 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 953571692468405300E9B753 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		9535716F246840E800E9B753 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9535716E246840E800E9B753 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		953571722468412500E9B753 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 953571712468412500E9B753 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
